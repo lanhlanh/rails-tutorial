@@ -19,3 +19,1504 @@
  DEBUG [21b8724f] Command: ~/.rvm/bin/rvm version
  DEBUG [a96636e9] 	bash: /home/deploy/.rvm/bin/rvm: No such file or directory
  DEBUG [a96636e9] 	
+  INFO ---------------------------------------------------------------------------
+  INFO START 2019-05-15 09:17:34 +0700 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO rbenv: rbenv_ruby is not set; ruby version will be defined by the remote hosts via rbenv
+  INFO [e65859f8] Running /usr/bin/env mkdir -p /tmp as deploy@18.222.233.192
+ DEBUG [e65859f8] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env mkdir -p /tmp )
+  INFO [ff978f34] Finished in 3.133 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-rails-tutorial-production-FRAMGIA\nguyen.t.h.lanh.sh 0.0%
+  INFO Uploading /tmp/git-ssh-rails-tutorial-production-FRAMGIA\nguyen.t.h.lanh.sh 100.0%
+  INFO [357e2f9c] Running /usr/bin/env chmod 700 /tmp/git-ssh-rails-tutorial-production-FRAMGIA\\nguyen.t.h.lanh.sh as deploy@18.222.233.192
+ DEBUG [357e2f9c] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env chmod 700 /tmp/git-ssh-rails-tutorial-production-FRAMGIA\\nguyen.t.h.lanh.sh )
+  INFO [02a14952] Finished in 0.723 seconds with exit status 0 (successful).
+  INFO [184f638e] Running /usr/bin/env git ls-remote git@github.com:lanhlanh/rails-tutorial.git HEAD as deploy@18.222.233.192
+ DEBUG [184f638e] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-rails-tutorial-production-FRAMGIA\nguyen.t.h.lanh.sh" ; /usr/bin/env git ls-remote git@github.com:lanhlanh/rails-tutorial.git HEAD )
+ DEBUG [a52e76d1] 	e131eeba507707c240863e8052ffe7f2dfa9a0f0
+ DEBUG [a52e76d1] 		HEAD
+  INFO [a52e76d1] Finished in 1.749 seconds with exit status 0 (successful).
+  INFO [0439ec79] Running /usr/bin/env mkdir -p /home/deploy/apps/rails-tutorial/shared /home/deploy/apps/rails-tutorial/releases as deploy@18.222.233.192
+ DEBUG [0439ec79] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env mkdir -p /home/deploy/apps/rails-tutorial/shared /home/deploy/apps/rails-tutorial/releases )
+  INFO [660f8b29] Finished in 0.681 seconds with exit status 0 (successful).
+  INFO [407f4892] Running /usr/bin/env mkdir -p /home/deploy/apps/rails-tutorial/shared/public/assets as deploy@18.222.233.192
+ DEBUG [407f4892] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env mkdir -p /home/deploy/apps/rails-tutorial/shared/public/assets )
+  INFO [37b0c389] Finished in 0.720 seconds with exit status 0 (successful).
+ DEBUG [d29ee64b] Running [ -f /home/deploy/apps/rails-tutorial/shared/puma.rb ] as deploy@18.222.233.192
+ DEBUG [d29ee64b] Command: [ -f /home/deploy/apps/rails-tutorial/shared/puma.rb ]
+ DEBUG [67dde608] Finished in 0.718 seconds with exit status 1 (failed).
+  WARN puma.rb NOT FOUND!
+ DEBUG Uploading /home/deploy/apps/rails-tutorial/shared/puma.rb 0.0%
+  INFO Uploading /home/deploy/apps/rails-tutorial/shared/puma.rb 100.0%
+  INFO puma.rb generated
+ DEBUG [7b9c725d] Running [ -f /home/deploy/apps/rails-tutorial/current/REVISION ] as deploy@18.222.233.192
+ DEBUG [7b9c725d] Command: [ -f /home/deploy/apps/rails-tutorial/current/REVISION ]
+ DEBUG [c6d27135] Finished in 0.718 seconds with exit status 1 (failed).
+ DEBUG [50bfb5ea] Running [ -f /home/deploy/apps/rails-tutorial/repo/HEAD ] as deploy@18.222.233.192
+ DEBUG [50bfb5ea] Command: [ -f /home/deploy/apps/rails-tutorial/repo/HEAD ]
+ DEBUG [ad2d287e] Finished in 0.715 seconds with exit status 1 (failed).
+ DEBUG [e08022bb] Running if test ! -d /home/deploy/apps/rails-tutorial; then echo "Directory does not exist '/home/deploy/apps/rails-tutorial'" 1>&2; false; fi as deploy@18.222.233.192
+ DEBUG [e08022bb] Command: if test ! -d /home/deploy/apps/rails-tutorial; then echo "Directory does not exist '/home/deploy/apps/rails-tutorial'" 1>&2; false; fi
+ DEBUG [8deb1e1e] Finished in 0.718 seconds with exit status 0 (successful).
+  INFO [8ff11bd3] Running /usr/bin/env git clone --mirror git@github.com:lanhlanh/rails-tutorial.git /home/deploy/apps/rails-tutorial/repo as deploy@18.222.233.192
+ DEBUG [8ff11bd3] Command: cd /home/deploy/apps/rails-tutorial && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-rails-tutorial-production-FRAMGIA\nguyen.t.h.lanh.sh" ; /usr/bin/env git clone --mirror git@github.com:lanhlanh/rails-tutorial.git /home/deploy/apps/rails-tutorial/repo )
+ DEBUG [81786404] 	Cloning into bare repository '/home/deploy/apps/rails-tutorial/repo'...
+ DEBUG [81786404] 	
+ DEBUG [81786404] 	remote: Enumerating objects: 171, done.[K
+ DEBUG [81786404] 	
+ DEBUG [81786404] 	remote: Counting objects:   0% (1/171)   [K
+ DEBUG [81786404] 	remote: Counting objects:   1% (2/171)   [K
+ DEBUG [81786404] 	remote: Counting objects:   2% (4/171)   [K
+ DEBUG [81786404] 	remote: Counting objects:   3% (6/171)   [K
+ DEBUG [81786404] 	remote: Counting objects:   4% (7/171)   [K
+ DEBUG [81786404] 	remote: Counting objects:   5% (9/171)   [K
+ DEBUG [81786404] 	remote: Counting objects:   6% (11/171)   [K
+ DEBUG [81786404] 	remote: Counting objects:   7% (12/171)   [K
+ DEBUG [81786404] 	remote: Counting objects:   8% (14/171)   [K
+ DEBUG [81786404] 	remote: Counting objects:   9% (16/171)   [K
+ DEBUG [81786404] 	remote: Counting objects:  10% (18/171)   [K
+ DEBUG [81786404] 	remote: Counting objects:  11% (19/171)   [K
+ DEBUG [81786404] 	remote: Counting objects:  12% (21/171)   [K
+ DEBUG [81786404] 	remote: Counting objects:  13% (23/171)   [K
+ DEBUG [81786404] 	remote: Counting objects:  14% (24/171)   [K
+ DEBUG [81786404] 	remote: Counting objects:  15% (26/171)   [K
+ DEBUG [81786404] 	remote: Counting objects:  16% (28/171)   [K
+ DEBUG [81786404] 	remote: Counting objects:  17% (30/171)   [K
+ DEBUG [81786404] 	remote: Counting objects:  18% (31/171)   [K
+ DEBUG [81786404] 	remote: Counting objects:  19% (33/171)   [K
+ DEBUG [81786404] 	remote: Counting objects:  20% (35/171)   [K
+ DEBUG [81786404] 	remote: Counting objects:  21% (36/171)   [K
+ DEBUG [81786404] 	remote: Counting objects:  22% (38/171)   [K
+ DEBUG [81786404] 	remote: Counting objects:  23% (40/171)   [K
+ DEBUG [81786404] 	remote: Counting objects:  24% (42/171)   [K
+ DEBUG [81786404] 	remote: Counting objects:  25% (43/171)   [K
+ DEBUG [81786404] 	remote: Counting objects:  26% (45/171)   [K
+ DEBUG [81786404] 	remote: Counting objects:  27% (47/171)   [K
+ DEBUG [81786404] 	remote: Counting objects:  28% (48/171)   [K
+ DEBUG [81786404] 	remote: Counting objects:  29% (50/171)   [K
+ DEBUG [81786404] 	remote: Counting objects:  30% (52/171)   [K
+ DEBUG [81786404] 	remote: Counting objects:  31% (54/171)   [K
+ DEBUG [81786404] 	remote: Counting objects:  32% (55/171)   [K
+ DEBUG [81786404] 	remote: Counting objects:  33% (57/171)   [K
+ DEBUG [81786404] 	remote: Counting objects:  34% (59/171)   [K
+ DEBUG [81786404] 	remote: Counting objects:  35% (60/171)   [K
+ DEBUG [81786404] 	remote: Counting objects:  36% (62/171)   
+ DEBUG [81786404] 	remote: Counting objects:  37% (64/171)   [K
+ DEBUG [81786404] 	remote: Counting objects:  38% (65/171)   [K
+ DEBUG [81786404] 	remote: Counting objects:  39% (67/171)   [K
+ DEBUG [81786404] 	remote: Counting objects:  40% (69/171)   [K
+ DEBUG [81786404] 	remote: Counting objects:  41% (71/171)   [K
+ DEBUG [81786404] 	remote: Counting objects:  42% (72/171)   [K
+ DEBUG [81786404] 	remote: Counting objects:  43% (74/171)   [K
+ DEBUG [81786404] 	remote: Counting objects:  44% (76/171)   [K
+ DEBUG [81786404] 	remote: Counting objects:  45% (77/171)   [K
+ DEBUG [81786404] 	remote: Counting objects:  46% (79/171)   [K
+ DEBUG [81786404] 	remote: Counting objects:  47% (81/171)   [K
+ DEBUG [81786404] 	remote: Counting objects:  48% (83/171)   [K
+ DEBUG [81786404] 	remote: Counting objects:  49% (84/171)   [K
+ DEBUG [81786404] 	remote: Counting objects:  50% (86/171)   [K
+ DEBUG [81786404] 	remote: Counting objects:  51% (88/171)   [K
+ DEBUG [81786404] 	remote: Counting objects:  52% (89/171)   [K
+ DEBUG [81786404] 	remote: Counting objects:  53% (91/171)   [K
+ DEBUG [81786404] 	remote: Counting objects:  54% (93/171)   [K
+ DEBUG [81786404] 	remote: Counting objects:  55% (95/171)   [K
+ DEBUG [81786404] 	remote: Counting objects:  56% (96/171)   [K
+ DEBUG [81786404] 	remote: Counting objects:  57% (98/171)   [K
+ DEBUG [81786404] 	remote: Counting objects:  58% (100/171)   [K
+ DEBUG [81786404] 	remote: Counting objects:  59% (101/171)   [K
+ DEBUG [81786404] 	remote: Counting objects:  60% (103/171)   [K
+ DEBUG [81786404] 	remote: Counting objects:  61% (105/171)   [K
+ DEBUG [81786404] 	remote: Counting objects:  62% (107/171)   [K
+ DEBUG [81786404] 	remote: Counting objects:  63% (108/171)   [K
+ DEBUG [81786404] 	remote: Counting objects:  64% (110/171)   [K
+ DEBUG [81786404] 	remote: Counting objects:  65% (112/171)   [K
+ DEBUG [81786404] 	remote: Counting objects:  66% (113/171)   [K
+ DEBUG [81786404] 	remote: Counting objects:  67% (115/171)   [K
+ DEBUG [81786404] 	remote: Counting objects:  68% (117/171)   [K
+ DEBUG [81786404] 	remote: Counting objects:  69% (118/171)   [K
+ DEBUG [81786404] 	remote: Counting objects:  70% (120/171)   [K
+ DEBUG [81786404] 	remote: Counting objects:  71% (122/171)   [K
+ DEBUG [81786404] 	remote: Counting objects:  72% (124/171)   [K
+ DEBUG [81786404] 	remote: Counting objects:  73% (125/171)   [K
+ DEBUG [81786404] 	remote: Counting objects:  74% (127/171)   [K
+ DEBUG [81786404] 	remote: Counting objects:  75% (129/171)   [K
+ DEBUG [81786404] 	remote: Counting objects:  76% (130/171)   [K
+ DEBUG [81786404] 	remote: Counting objects:  77% (132/171)   [K
+ DEBUG [81786404] 	remote: Counting objects:  78% (134/171)   [K
+ DEBUG [81786404] 	remote: Counting objects:  79% (136/171)   [K
+ DEBUG [81786404] 	remote: Counting objects:  80% (137/171)   [K
+ DEBUG [81786404] 	remote: Counting objects:  81% (139/171)   [K
+ DEBUG [81786404] 	remote: Counting objects:  82% (141/171)   [K
+ DEBUG [81786404] 	remote: Counting objects:  83% (142/171)   [K
+ DEBUG [81786404] 	remote: Counting objects:  84% (144/171)   [K
+ DEBUG [81786404] 	remote: Counting objects:  85% (146/171)   [K
+ DEBUG [81786404] 	remote: Counting objects:  86% (148/171)   [K
+ DEBUG [81786404] 	remote: Counting objects:  87% (149/171)   [K
+ DEBUG [81786404] 	remote: Counting objects:  88% (151/171)   [K
+ DEBUG [81786404] 	remote: Counting objects:  89% (153/171)   [K
+ DEBUG [81786404] 	remote: Counting objects:  90% (154/171)   [K
+ DEBUG [81786404] 	remote: Counting objects:  91% (156/171)   [K
+ DEBUG [81786404] 	remote: Counting objects:  92% (158/171)   [K
+ DEBUG [81786404] 	remote: Counting objects:  93% (160/171)   [K
+ DEBUG [81786404] 	remote: Counting objects:  94% (161/171)   [K
+ DEBUG [81786404] 	remote: Counting objects:  95% (163/171)   [K
+ DEBUG [81786404] 	remote: Counting objects:  96% (165/171)   [K
+ DEBUG [81786404] 	remote: Counting objects:  97% (166/171)   [K
+ DEBUG [81786404] 	remote: Counting objects:  98% (168/171)   [K
+ DEBUG [81786404] 	remote: Counting objects:  99% (170/171)   [K
+ DEBUG [81786404] 	remote: Counting objects: 100% (171/171)   [K
+ DEBUG [81786404] 	remote: Counting objects: 100% (171/171), done.[K
+ DEBUG [81786404] 	
+ DEBUG [81786404] 	remote: Compressing objects:   0% (1/148)   [K
+ DEBUG [81786404] 	remote: Compressing objects:   1% (2/148)   [K
+ DEBUG [81786404] 	remote: Compressing objects:   2% (3/148)   [K
+ DEBUG [81786404] 	remote: Compressing objects:   3% (5/148)   [K
+ DEBUG [81786404] 	remote: Compressing objects:   4% (6/148)   [K
+ DEBUG [81786404] 	remote: Compressing objects:   5% (8/148)   [K
+ DEBUG [81786404] 	remote: Compressing objects:   6% (9/148)   [K
+ DEBUG [81786404] 	remote: Compressing objects:   7% (11/148)   [K
+ DEBUG [81786404] 	remote: Compressing objects:   8% (12/148)   [K
+ DEBUG [81786404] 	remote: Compressing objects:   9% (14/148)   [K
+ DEBUG [81786404] 	remote: Compressing objects:  10% (15/148)   [K
+ DEBUG [81786404] 	remote: Compressing objects:  11% (17/148)   [K
+ DEBUG [81786404] 	remote: Compressing objects:  12% (18/148)   [K
+ DEBUG [81786404] 	remote: Compressing objects:  13% (20/148)   [K
+ DEBUG [81786404] 	remote: Compressing objects:  14% (21/148)   [K
+ DEBUG [81786404] 	remote: Compressing objects:  15% (23/148)   [K
+ DEBUG [81786404] 	remote: Compressing objects:  16% (24/148)   [K
+ DEBUG [81786404] 	remote: Compressing objects:  17% (26/148)   [K
+ DEBUG [81786404] 	remote: Compressing objects:  18% (27/148)   [K
+ DEBUG [81786404] 	remote: Compressing objects:  19% (29/148)   [K
+ DEBUG [81786404] 	remote: Compressing objects:  20% (30/148)   [K
+ DEBUG [81786404] 	remote: Compressing objects:  21% (32/148)   [K
+ DEBUG [81786404] 	remote: Compressing objects:  22% (33/148)   [K
+ DEBUG [81786404] 	remote: Compressing objects:  23% (35/148)   [K
+ DEBUG [81786404] 	remote: Compressing objects:  24% (36/148)   [K
+ DEBUG [81786404] 	remote: Compressing objects:  25% (37/148)   [K
+ DEBUG [81786404] 	remote: Compressing objects:  26% (39/148)   [K
+ DEBUG [81786404] 	remote: Compressing objects:  27% (40/148)   [K
+ DEBUG [81786404] 	remote: Compressing objects:  28% (42/148)   [K
+ DEBUG [81786404] 	remote: Compressing objects:  29% (43/148)   [K
+ DEBUG [81786404] 	remote: Compressing objects:  30% (45/148)   [K
+ DEBUG [81786404] 	remote: Compressing objects:  31% (46/148)   [K
+ DEBUG [81786404] 	remote: Compressing objects:  32% (48/148)   [K
+ DEBUG [81786404] 	remote: Compressing objects:  33% (49/148)   [K
+ DEBUG [81786404] 	remote: Compressing objects:  34% (51/148)   [K
+ DEBUG [81786404] 	remote: Compressing objects:  35% (52/148)   [K
+ DEBUG [81786404] 	remote: Compressing objects:  36% (54/148)   [K
+ DEBUG [81786404] 	remote: Compressing objects:  37% (55/148)   [K
+ DEBUG [81786404] 	remote: Compressing objects:  38% (57/148)   [K
+ DEBUG [81786404] 	remote: Compressing objects:  39% (58/148)   [K
+ DEBUG [81786404] 	remote: Compressing objects:  40% (60/148)   [K
+ DEBUG [81786404] 	remote: Compressing objects:  41% (61/148)   [K
+ DEBUG [81786404] 	remote: Compressing objects:  42% (63/148)   [K
+ DEBUG [81786404] 	remote: Compressing objects:  43% (64/148)   [K
+ DEBUG [81786404] 	remote: Compressing objects:  44% (66/148)   [K
+ DEBUG [81786404] 	remote: Compressing objects:  45% (67/148)   [K
+ DEBUG [81786404] 	remote: Compressing objects:  46% (69/148)   [K
+ DEBUG [81786404] 	remote: Compressing objects:  47% (70/148)   [K
+ DEBUG [81786404] 	remote: Compressing objects:  48% (72/148)   [K
+ DEBUG [81786404] 	remote: Compressing objects:  49% (73/148)   [K
+ DEBUG [81786404] 	remote: Compressing objects:  50% (74/148)   [K
+ DEBUG [81786404] 	remote: Compressing objects:  51% (76/148)   [K
+ DEBUG [81786404] 	remote: Compressing objects:  52% (77/148)   [K
+ DEBUG [81786404] 	remote: Compressing objects:  53% (79/148)   [K
+ DEBUG [81786404] 	remote: Compressing objects:  54% (80/148)   [K
+ DEBUG [81786404] 	remote: Compressing objects:  55% (82/148)   [K
+ DEBUG [81786404] 	remote: Compressing objects:  56% (83/148)   [K
+ DEBUG [81786404] 	remote: Compressing objects:  57% (85/148)   [K
+ DEBUG [81786404] 	remote: Compressing objects:  58% (86/148)   [K
+ DEBUG [81786404] 	remote: Compressing objects:  59% (88/148)   [K
+ DEBUG [81786404] 	remote: Compressing objects:  60% (89/148)   [K
+ DEBUG [81786404] 	remote: Compressing objects:  61% (91/148)   [K
+ DEBUG [81786404] 	remote: Compressing objects:  62% (92/148)   [K
+ DEBUG [81786404] 	remote: Compressing objects:  63% (94/148)   [K
+ DEBUG [81786404] 	remote: Compressing objects:  64% (95/148)   [K
+ DEBUG [81786404] 	remote: Compressing objects:  65% (97/148)   [K
+ DEBUG [81786404] 	remote: Compressing objects:  66% (98/148)   [K
+ DEBUG [81786404] 	remote: Compressing objects:  67% (100/148)   [K
+ DEBUG [81786404] 	remote: Compressing objects:  68% (101/148)   [K
+ DEBUG [81786404] 	remote: Compressing objects:  69% (103/148)   [K
+ DEBUG [81786404] 	remote: Compressing objects:  70% (104/148)   [K
+ DEBUG [81786404] 	remote: Compressing objects:  71% (106/148)   [K
+ DEBUG [81786404] 	remote: Compressing objects:  72% (107/148)   [K
+ DEBUG [81786404] 	remote: Compressing objects:  73% (109/148)   [K
+ DEBUG [81786404] 	remote: Compressing objects:  74% (110/148)   [K
+ DEBUG [81786404] 	remote: Compressing objects:  75% (111/148)   [K
+ DEBUG [81786404] 	remote: Compressing objects:  76% (113/148)   [K
+ DEBUG [81786404] 	remote: Compressing objects:  77% (114/148)   [K
+ DEBUG [81786404] 	remote: Compressing objects:  78% (116/148)   [K
+ DEBUG [81786404] 	remote: Compressing objects:  79% (117/148)   [K
+ DEBUG [81786404] 	remote: Compressing objects:  80% (119/148)   [K
+ DEBUG [81786404] 	remote: Compressing objects:  81% (120/148)   [K
+ DEBUG [81786404] 	remote: Compressing objects:  82% (122/148)   [K
+ DEBUG [81786404] 	remote: Compressing objects:  83% (123/148)   [K
+ DEBUG [81786404] 	remote: Compressing objects:  84% (125/148)   [K
+ DEBUG [81786404] 	remote: Compressing objects:  85% (126/148)   [K
+ DEBUG [81786404] 	remote: Compressing objects:  86% (128/148)   [K
+ DEBUG [81786404] 	remote: Compressing objects:  87% (129/148)   [K
+ DEBUG [81786404] 	remote: Compressing objects:  88% (131/148)   [K
+ DEBUG [81786404] 	remote: Compressing objects:  89% (132/148)   [K
+ DEBUG [81786404] 	remote: Compressing objects:  90% (134/148)   [K
+ DEBUG [81786404] 	remote: Compressing objects:  91% (135/148)   [K
+ DEBUG [81786404] 	remote: Compressing objects:  92% (137/148)   [K
+ DEBUG [81786404] 	remote: Compressing objects:  93% (138/148)   [K
+ DEBUG [81786404] 	remote: Compressing objects:  94% (140/148)   [K
+ DEBUG [81786404] 	remote: Compressing objects:  95% (141/148)   [K
+ DEBUG [81786404] 	remote: Compressing objects:  96% (143/148)   [K
+ DEBUG [81786404] 	remote: Compressing objects:  97% (144/148)   [K
+ DEBUG [81786404] 	remote: Compressing objects:  98% (146/148)   [K
+ DEBUG [81786404] 	remote: Compressing objects:  99% (147/148)   [K
+ DEBUG [81786404] 	remote: Compressing objects: 100% (148/148)   [K
+ DEBUG [81786404] 	remote: Compressing objects: 100% (148/148), done.[K
+ DEBUG [81786404] 	
+ DEBUG [81786404] 	remote: Total 171 (delta 11), reused 166 (delta 9), pack-reused 0[K
+ DEBUG [81786404] 	
+ DEBUG [81786404] 	Receiving objects:   0% (1/171)   
+ DEBUG [81786404] 	Receiving objects:   1% (2/171)   
+ DEBUG [81786404] 	Receiving objects:   2% (4/171)   
+ DEBUG [81786404] 	Receiving objects:   3% (6/171)   
+ DEBUG [81786404] 	Receiving objects:   4% (7/171)   
+ DEBUG [81786404] 	Receiving objects:   5% (9/171)   
+ DEBUG [81786404] 	Receiving objects:   6% (11/171)   
+ DEBUG [81786404] 	Receiving objects:   7% (12/171)   
+ DEBUG [81786404] 	Receiving objects:   8% (14/171)   
+ DEBUG [81786404] 	Receiving objects:   9% (16/171)   
+ DEBUG [81786404] 	Receiving objects:  10% (18/171)   
+ DEBUG [81786404] 	Receiving objects:  11% (19/171)   
+ DEBUG [81786404] 	Receiving objects:  12% (21/171)   
+ DEBUG [81786404] 	Receiving objects:  13% (23/171)   
+ DEBUG [81786404] 	Receiving objects:  14% (24/171)   
+ DEBUG [81786404] 	Receiving objects:  15% (26/171)   
+ DEBUG [81786404] 	Receiving objects:  16% (28/171)   
+ DEBUG [81786404] 	Receiving objects:  17% (30/171)   
+ DEBUG [81786404] 	Receiving objects:  18% (31/171)   
+ DEBUG [81786404] 	Receiving objects:  19% (33/171)   
+ DEBUG [81786404] 	Receiving objects:  20% (35/171)   
+ DEBUG [81786404] 	Receiving objects:  21% (36/171)   
+ DEBUG [81786404] 	Receiving objects:  22% (38/171)   
+ DEBUG [81786404] 	Receiving objects:  23% (40/171)   
+ DEBUG [81786404] 	Receiving objects:  24% (42/171)   
+ DEBUG [81786404] 	Receiving objects:  25% (43/171)   
+ DEBUG [81786404] 	Receiving objects:  26% (45/171)   
+ DEBUG [81786404] 	Receiving objects:  27% (47/171)   
+ DEBUG [81786404] 	Receiving objects:  28% (48/171)   
+ DEBUG [81786404] 	Receiving objects:  29% (50/171)   
+ DEBUG [81786404] 	Receiving objects:  30% (52/171)   
+ DEBUG [81786404] 	Receiving objects:  31% (54/171)   
+ DEBUG [81786404] 	Receiving objects:  32% (55/171)   
+ DEBUG [81786404] 	Receiving objects:  33% (57/171)   
+ DEBUG [81786404] 	Receiving objects:  34% (59/171)   
+ DEBUG [81786404] 	Receiving objects:  35% (60/171)   
+ DEBUG [81786404] 	Receiving objects:  36% (62/171)   
+ DEBUG [81786404] 	Receiving objects:  37% (64/171)   
+ DEBUG [81786404] 	Receiving objects:  38% (65/171)   
+ DEBUG [81786404] 	Receiving objects:  39% (67/171)   
+ DEBUG [81786404] 	Receiving objects:  40% (69/171)   
+ DEBUG [81786404] 	Receiving objects:  41% (71/171)   
+ DEBUG [81786404] 	Receiving objects:  42% (72/171)   
+ DEBUG [81786404] 	Receiving objects:  43% (74/171)   
+ DEBUG [81786404] 	Receiving objects:  44% (76/171)   
+ DEBUG [81786404] 	Receiving objects:  45% (77/171)   
+ DEBUG [81786404] 	Receiving objects:  46% (79/171)   
+ DEBUG [81786404] 	Receiving objects:  47% (81/171)   
+ DEBUG [81786404] 	Receiving objects:  48% (83/171)   
+ DEBUG [81786404] 	Receiving objects:  49% (84/171)   
+ DEBUG [81786404] 	Receiving objects:  50% (86/171)   
+ DEBUG [81786404] 	Receiving objects:  51% (88/171)   
+ DEBUG [81786404] 	Receiving objects:  52% (89/171)   
+ DEBUG [81786404] 	Receiving objects:  53% (91/171)   
+ DEBUG [81786404] 	Receiving objects:  54% (93/171)   
+ DEBUG [81786404] 	Receiving objects:  55% (95/171)   
+ DEBUG [81786404] 	Receiving objects:  56% (96/171)   
+ DEBUG [81786404] 	Receiving objects:  57% (98/171)   
+ DEBUG [81786404] 	Receiving objects:  58% (100/171)   
+ DEBUG [81786404] 	Receiving objects:  59% (101/171)   
+ DEBUG [81786404] 	Receiving objects:  60% (103/171)   
+ DEBUG [81786404] 	Receiving objects:  61% (105/171)   
+ DEBUG [81786404] 	Receiving objects:  62% (107/171)   
+ DEBUG [81786404] 	Receiving objects:  63% (108/171)   
+ DEBUG [81786404] 	Receiving objects:  64% (110/171)   
+ DEBUG [81786404] 	Receiving objects:  65% (112/171)   
+ DEBUG [81786404] 	Receiving objects:  66% (113/171)   
+ DEBUG [81786404] 	Receiving objects:  67% (115/171)   
+ DEBUG [81786404] 	Receiving objects:  68% (117/171)   
+ DEBUG [81786404] 	Receiving objects:  69% (118/171)   
+ DEBUG [81786404] 	Receiving objects:  70% (120/171)   
+ DEBUG [81786404] 	Receiving objects:  71% (122/171)   
+ DEBUG [81786404] 	Receiving objects:  72% (124/171)   
+ DEBUG [81786404] 	Receiving objects:  73% (125/171)   
+ DEBUG [81786404] 	Receiving objects:  74% (127/171)   
+ DEBUG [81786404] 	Receiving objects:  75% (129/171)   
+ DEBUG [81786404] 	Receiving objects:  76% (130/171)   
+ DEBUG [81786404] 	Receiving objects:  77% (132/171)   
+ DEBUG [81786404] 	Receiving objects:  78% (134/171)   
+ DEBUG [81786404] 	Receiving objects:  79% (136/171)   
+ DEBUG [81786404] 	Receiving objects:  80% (137/171)   
+ DEBUG [81786404] 	Receiving objects:  81% (139/171)   
+ DEBUG [81786404] 	Receiving objects:  82% (141/171)   
+ DEBUG [81786404] 	Receiving objects:  83% (142/171)   
+ DEBUG [81786404] 	Receiving objects:  84% (144/171)   
+ DEBUG [81786404] 	Receiving objects:  85% (146/171)   
+ DEBUG [81786404] 	Receiving objects:  86% (148/171)   
+ DEBUG [81786404] 	Receiving objects:  87% (149/171)   
+ DEBUG [81786404] 	Receiving objects:  88% (151/171)   
+ DEBUG [81786404] 	Receiving objects:  89% (153/171)   
+ DEBUG [81786404] 	Receiving objects:  90% (154/171)   
+ DEBUG [81786404] 	Receiving objects:  91% (156/171)   
+ DEBUG [81786404] 	Receiving objects:  92% (158/171)   
+ DEBUG [81786404] 	Receiving objects:  93% (160/171)   
+ DEBUG [81786404] 	Receiving objects:  94% (161/171)   
+ DEBUG [81786404] 	Receiving objects:  95% (163/171)   
+ DEBUG [81786404] 	Receiving objects:  96% (165/171)   
+ DEBUG [81786404] 	Receiving objects:  97% (166/171)   
+ DEBUG [81786404] 	Receiving objects:  98% (168/171)   
+ DEBUG [81786404] 	Receiving objects:  99% (170/171)   
+ DEBUG [81786404] 	Receiving objects: 100% (171/171)   
+ DEBUG [81786404] 	Receiving objects: 100% (171/171), 56.09 KiB | 9.35 MiB/s, done.
+ DEBUG [81786404] 	
+ DEBUG [81786404] 	Resolving deltas:   0% (0/11)   
+ DEBUG [81786404] 	Resolving deltas:  18% (2/11)   
+ DEBUG [81786404] 	Resolving deltas:  27% (3/11)   
+ DEBUG [81786404] 	Resolving deltas:  45% (5/11)   
+ DEBUG [81786404] 	Resolving deltas:  54% (6/11)   
+ DEBUG [81786404] 	Resolving deltas:  72% (8/11)   
+ DEBUG [81786404] 	Resolving deltas:  81% (9/11)   
+ DEBUG [81786404] 	Resolving deltas: 100% (11/11)   
+ DEBUG [81786404] 	Resolving deltas: 100% (11/11), done.
+ DEBUG [81786404] 	
+  INFO [81786404] Finished in 2.217 seconds with exit status 0 (successful).
+ DEBUG [e174ac93] Running if test ! -d /home/deploy/apps/rails-tutorial/repo; then echo "Directory does not exist '/home/deploy/apps/rails-tutorial/repo'" 1>&2; false; fi as deploy@18.222.233.192
+ DEBUG [e174ac93] Command: if test ! -d /home/deploy/apps/rails-tutorial/repo; then echo "Directory does not exist '/home/deploy/apps/rails-tutorial/repo'" 1>&2; false; fi
+ DEBUG [b4505e90] Finished in 0.677 seconds with exit status 0 (successful).
+  INFO [15977cef] Running /usr/bin/env git remote set-url origin git@github.com:lanhlanh/rails-tutorial.git as deploy@18.222.233.192
+ DEBUG [15977cef] Command: cd /home/deploy/apps/rails-tutorial/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-rails-tutorial-production-FRAMGIA\nguyen.t.h.lanh.sh" ; /usr/bin/env git remote set-url origin git@github.com:lanhlanh/rails-tutorial.git )
+  INFO [bdc30af7] Finished in 0.730 seconds with exit status 0 (successful).
+  INFO [0a199ba5] Running /usr/bin/env git remote update --prune as deploy@18.222.233.192
+ DEBUG [0a199ba5] Command: cd /home/deploy/apps/rails-tutorial/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-rails-tutorial-production-FRAMGIA\nguyen.t.h.lanh.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [3e0ae2aa] 	Fetching origin
+ DEBUG [3e0ae2aa] 	
+  INFO [3e0ae2aa] Finished in 1.788 seconds with exit status 0 (successful).
+ DEBUG [c3a72ed5] Running if test ! -d /home/deploy/apps/rails-tutorial/repo; then echo "Directory does not exist '/home/deploy/apps/rails-tutorial/repo'" 1>&2; false; fi as deploy@18.222.233.192
+ DEBUG [c3a72ed5] Command: if test ! -d /home/deploy/apps/rails-tutorial/repo; then echo "Directory does not exist '/home/deploy/apps/rails-tutorial/repo'" 1>&2; false; fi
+ DEBUG [4a0d36a4] Finished in 0.676 seconds with exit status 0 (successful).
+  INFO [1b346992] Running /usr/bin/env mkdir -p /home/deploy/apps/rails-tutorial/releases/20190515021746 as deploy@18.222.233.192
+ DEBUG [1b346992] Command: cd /home/deploy/apps/rails-tutorial/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-rails-tutorial-production-FRAMGIA\nguyen.t.h.lanh.sh" ; /usr/bin/env mkdir -p /home/deploy/apps/rails-tutorial/releases/20190515021746 )
+  INFO [70c4ecb2] Finished in 0.720 seconds with exit status 0 (successful).
+  INFO [9db858dc] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/deploy/apps/rails-tutorial/releases/20190515021746 as deploy@18.222.233.192
+ DEBUG [9db858dc] Command: cd /home/deploy/apps/rails-tutorial/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-rails-tutorial-production-FRAMGIA\nguyen.t.h.lanh.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/deploy/apps/rails-tutorial/releases/20190515021746 )
+  INFO [9b45cf81] Finished in 0.739 seconds with exit status 0 (successful).
+ DEBUG [0d033b8f] Running if test ! -d /home/deploy/apps/rails-tutorial/repo; then echo "Directory does not exist '/home/deploy/apps/rails-tutorial/repo'" 1>&2; false; fi as deploy@18.222.233.192
+ DEBUG [0d033b8f] Command: if test ! -d /home/deploy/apps/rails-tutorial/repo; then echo "Directory does not exist '/home/deploy/apps/rails-tutorial/repo'" 1>&2; false; fi
+ DEBUG [2df89d8b] Finished in 0.717 seconds with exit status 0 (successful).
+ DEBUG [b7849141] Running /usr/bin/env git rev-list --max-count=1 master as deploy@18.222.233.192
+ DEBUG [b7849141] Command: cd /home/deploy/apps/rails-tutorial/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-rails-tutorial-production-FRAMGIA\nguyen.t.h.lanh.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [cca0ef15] 	e131eeba507707c240863e8052ffe7f2dfa9a0f0
+ DEBUG [cca0ef15] 	
+ DEBUG [cca0ef15] Finished in 0.722 seconds with exit status 0 (successful).
+ DEBUG [2cbb90ae] Running if test ! -d /home/deploy/apps/rails-tutorial/releases/20190515021746; then echo "Directory does not exist '/home/deploy/apps/rails-tutorial/releases/20190515021746'" 1>&2; false; fi as deploy@18.222.233.192
+ DEBUG [2cbb90ae] Command: if test ! -d /home/deploy/apps/rails-tutorial/releases/20190515021746; then echo "Directory does not exist '/home/deploy/apps/rails-tutorial/releases/20190515021746'" 1>&2; false; fi
+ DEBUG [528ca9a0] Finished in 0.719 seconds with exit status 0 (successful).
+  INFO [4c9ad96e] Running /usr/bin/env echo "e131eeba507707c240863e8052ffe7f2dfa9a0f0" > REVISION as deploy@18.222.233.192
+ DEBUG [4c9ad96e] Command: cd /home/deploy/apps/rails-tutorial/releases/20190515021746 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env echo "e131eeba507707c240863e8052ffe7f2dfa9a0f0" > REVISION )
+  INFO [72bd223f] Finished in 0.722 seconds with exit status 0 (successful).
+  INFO [265d3b4f] Running /usr/bin/env mkdir -p /home/deploy/apps/rails-tutorial/releases/20190515021746/public as deploy@18.222.233.192
+ DEBUG [265d3b4f] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env mkdir -p /home/deploy/apps/rails-tutorial/releases/20190515021746/public )
+  INFO [9166178d] Finished in 0.721 seconds with exit status 0 (successful).
+ DEBUG [8461a0cb] Running [ -L /home/deploy/apps/rails-tutorial/releases/20190515021746/public/assets ] as deploy@18.222.233.192
+ DEBUG [8461a0cb] Command: [ -L /home/deploy/apps/rails-tutorial/releases/20190515021746/public/assets ]
+ DEBUG [5c974829] Finished in 0.720 seconds with exit status 1 (failed).
+ DEBUG [b3748a16] Running [ -d /home/deploy/apps/rails-tutorial/releases/20190515021746/public/assets ] as deploy@18.222.233.192
+ DEBUG [b3748a16] Command: [ -d /home/deploy/apps/rails-tutorial/releases/20190515021746/public/assets ]
+ DEBUG [a05735d3] Finished in 0.718 seconds with exit status 1 (failed).
+  INFO [0af5282a] Running /usr/bin/env ln -s /home/deploy/apps/rails-tutorial/shared/public/assets /home/deploy/apps/rails-tutorial/releases/20190515021746/public/assets as deploy@18.222.233.192
+ DEBUG [0af5282a] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env ln -s /home/deploy/apps/rails-tutorial/shared/public/assets /home/deploy/apps/rails-tutorial/releases/20190515021746/public/assets )
+  INFO [ef3b4972] Finished in 0.720 seconds with exit status 0 (successful).
+ DEBUG [0a3715b1] Running if test ! -d /home/deploy/apps/rails-tutorial/releases/20190515021746; then echo "Directory does not exist '/home/deploy/apps/rails-tutorial/releases/20190515021746'" 1>&2; false; fi as deploy@18.222.233.192
+ DEBUG [0a3715b1] Command: if test ! -d /home/deploy/apps/rails-tutorial/releases/20190515021746; then echo "Directory does not exist '/home/deploy/apps/rails-tutorial/releases/20190515021746'" 1>&2; false; fi
+ DEBUG [b0df9366] Finished in 0.722 seconds with exit status 0 (successful).
+ DEBUG [3ced56b3] Running $HOME/.rbenv/bin/rbenv exec bundle check --path /home/deploy/apps/rails-tutorial/shared/bundle as deploy@18.222.233.192
+ DEBUG [3ced56b3] Command: cd /home/deploy/apps/rails-tutorial/releases/20190515021746 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; $HOME/.rbenv/bin/rbenv exec bundle check --path /home/deploy/apps/rails-tutorial/shared/bundle )
+ DEBUG [73e21cee] 	[31mhttps://github.com/octoberstorm/eslint-rails (at master@71a4029) is not yet
+ DEBUG [73e21cee] 	
+ DEBUG [73e21cee] 	checked out. Run `bundle install` first.[0m
+ DEBUG [73e21cee] 	
+ DEBUG [73e21cee] Finished in 1.500 seconds with exit status 11 (failed).
+  INFO [071cf2a3] Running $HOME/.rbenv/bin/rbenv exec bundle install --path /home/deploy/apps/rails-tutorial/shared/bundle --jobs 4 --without development test --deployment --quiet as deploy@18.222.233.192
+ DEBUG [071cf2a3] Command: cd /home/deploy/apps/rails-tutorial/releases/20190515021746 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; $HOME/.rbenv/bin/rbenv exec bundle install --path /home/deploy/apps/rails-tutorial/shared/bundle --jobs 4 --without development test --deployment --quiet )
+  INFO [4d2c0069] Finished in 68.534 seconds with exit status 0 (successful).
+ DEBUG [b4ddbf4e] Running if test ! -d /home/deploy/apps/rails-tutorial/releases/20190515021746; then echo "Directory does not exist '/home/deploy/apps/rails-tutorial/releases/20190515021746'" 1>&2; false; fi as deploy@18.222.233.192
+ DEBUG [b4ddbf4e] Command: if test ! -d /home/deploy/apps/rails-tutorial/releases/20190515021746; then echo "Directory does not exist '/home/deploy/apps/rails-tutorial/releases/20190515021746'" 1>&2; false; fi
+ DEBUG [25d3ec33] Finished in 0.716 seconds with exit status 0 (successful).
+  INFO [71db362d] Running $HOME/.rbenv/bin/rbenv exec bundle exec rake assets:precompile as deploy@18.222.233.192
+ DEBUG [71db362d] Command: cd /home/deploy/apps/rails-tutorial/releases/20190515021746 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" RAILS_ENV="production" RAILS_GROUPS="" ; $HOME/.rbenv/bin/rbenv exec bundle exec rake assets:precompile )
+ DEBUG [0fff4346] 	[2K
+ DEBUG [0fff4346] 	[1G
+ DEBUG [0fff4346] 	[1myarn install v1.16.0[22m
+ DEBUG [0fff4346] 	
+ DEBUG [0fff4346] 	[2K
+ DEBUG [0fff4346] 	[1G
+ DEBUG [0fff4346] 	[34minfo[39m No lockfile found.
+ DEBUG [0fff4346] 	
+ DEBUG [0fff4346] 	[2K
+ DEBUG [0fff4346] 	[1G
+ DEBUG [0fff4346] 	[2m[1/4][22m Resolving packages...
+ DEBUG [0fff4346] 	
+ DEBUG [0fff4346] 	[1G
+ DEBUG [0fff4346] 	⠁ 
+ DEBUG [0fff4346] 	[0K
+ DEBUG [0fff4346] 	[2K
+ DEBUG [0fff4346] 	[1G
+ DEBUG [0fff4346] 	[2K
+ DEBUG [0fff4346] 	[1G
+ DEBUG [0fff4346] 	[2m[2/4][22m Fetching packages...
+ DEBUG [0fff4346] 	
+ DEBUG [0fff4346] 	[2K
+ DEBUG [0fff4346] 	[1G
+ DEBUG [0fff4346] 	[2m[3/4][22m Linking dependencies...
+ DEBUG [0fff4346] 	
+ DEBUG [0fff4346] 	[2K
+ DEBUG [0fff4346] 	[1G
+ DEBUG [0fff4346] 	[2m[4/4][22m Building fresh packages...
+ DEBUG [0fff4346] 	
+ DEBUG [0fff4346] 	[2K
+ DEBUG [0fff4346] 	[1G
+ DEBUG [0fff4346] 	[32msuccess[39m Saved lockfile.
+ DEBUG [0fff4346] 	
+ DEBUG [0fff4346] 	[2K
+ DEBUG [0fff4346] 	[1G
+ DEBUG [0fff4346] 	Done in 0.14s.
+ DEBUG [0fff4346] 	
+ DEBUG [0fff4346] 	I, [2019-05-15T02:19:17.038296 #13284]  INFO -- : Writing /home/deploy/apps/rails-tutorial/releases/20190515021746/public/assets/rails-c094bc3a4bf50e5bb477109e5cb0d213af27ad75b481c4df249f50974dbeefe6.png
+ DEBUG [0fff4346] 	
+ DEBUG [0fff4346] 	I, [2019-05-15T02:19:20.932361 #13284]  INFO -- : Writing /home/deploy/apps/rails-tutorial/releases/20190515021746/public/assets/application-947a5fc9fd1017b32fdca3237a377223d977eee5f7e92832a4facfd2f1595779.js
+ DEBUG [0fff4346] 	
+ DEBUG [0fff4346] 	I, [2019-05-15T02:19:20.932705 #13284]  INFO -- : Writing /home/deploy/apps/rails-tutorial/releases/20190515021746/public/assets/application-947a5fc9fd1017b32fdca3237a377223d977eee5f7e92832a4facfd2f1595779.js.gz
+ DEBUG [0fff4346] 	
+ DEBUG [0fff4346] 	I, [2019-05-15T02:19:25.758146 #13284]  INFO -- : Writing /home/deploy/apps/rails-tutorial/releases/20190515021746/public/assets/application-b7dd94e002e3b6a63427d8beb4bc279bf156287280557be3f0068ce7142acc44.css
+ DEBUG [0fff4346] 	
+ DEBUG [0fff4346] 	I, [2019-05-15T02:19:25.758729 #13284]  INFO -- : Writing /home/deploy/apps/rails-tutorial/releases/20190515021746/public/assets/application-b7dd94e002e3b6a63427d8beb4bc279bf156287280557be3f0068ce7142acc44.css.gz
+ DEBUG [0fff4346] 	
+ DEBUG [0fff4346] 	I, [2019-05-15T02:19:25.763437 #13284]  INFO -- : Writing /home/deploy/apps/rails-tutorial/releases/20190515021746/public/assets/bootstrap/glyphicons-halflings-regular-13634da87d9e23f8c3ed9108ce1724d183a39ad072e73e1b3d8cbf646d2d0407.eot
+ DEBUG [0fff4346] 	
+ DEBUG [0fff4346] 	I, [2019-05-15T02:19:25.763904 #13284]  INFO -- : Writing /home/deploy/apps/rails-tutorial/releases/20190515021746/public/assets/bootstrap/glyphicons-halflings-regular-13634da87d9e23f8c3ed9108ce1724d183a39ad072e73e1b3d8cbf646d2d0407.eot.gz
+ DEBUG [0fff4346] 	
+ DEBUG [0fff4346] 	I, [2019-05-15T02:19:25.765059 #13284]  INFO -- : Writing /home/deploy/apps/rails-tutorial/releases/20190515021746/public/assets/bootstrap/glyphicons-halflings-regular-fe185d11a49676890d47bb783312a0cda5a44c4039214094e7957b4c040ef11c.woff2
+ DEBUG [0fff4346] 	
+ DEBUG [0fff4346] 	I, [2019-05-15T02:19:25.765612 #13284]  INFO -- : Writing /home/deploy/apps/rails-tutorial/releases/20190515021746/public/assets/bootstrap/glyphicons-halflings-regular-a26394f7ede100ca118eff2eda08596275a9839b959c226e15439557a5a80742.woff
+ DEBUG [0fff4346] 	
+ DEBUG [0fff4346] 	I, [2019-05-15T02:19:25.766124 #13284]  INFO -- : Writing /home/deploy/apps/rails-tutorial/releases/20190515021746/public/assets/bootstrap/glyphicons-halflings-regular-e395044093757d82afcb138957d06a1ea9361bdcf0b442d06a18a8051af57456.ttf
+ DEBUG [0fff4346] 	
+ DEBUG [0fff4346] 	I, [2019-05-15T02:19:25.766496 #13284]  INFO -- : Writing /home/deploy/apps/rails-tutorial/releases/20190515021746/public/assets/bootstrap/glyphicons-halflings-regular-e395044093757d82afcb138957d06a1ea9361bdcf0b442d06a18a8051af57456.ttf.gz
+ DEBUG [0fff4346] 	
+ DEBUG [0fff4346] 	I, [2019-05-15T02:19:25.769685 #13284]  INFO -- : Writing /home/deploy/apps/rails-tutorial/releases/20190515021746/public/assets/bootstrap/glyphicons-halflings-regular-42f60659d265c1a3c30f9fa42abcbb56bd4a53af4d83d316d6dd7a36903c43e5.svg
+ DEBUG [0fff4346] 	
+ DEBUG [0fff4346] 	I, [2019-05-15T02:19:25.769884 #13284]  INFO -- : Writing /home/deploy/apps/rails-tutorial/releases/20190515021746/public/assets/bootstrap/glyphicons-halflings-regular-42f60659d265c1a3c30f9fa42abcbb56bd4a53af4d83d316d6dd7a36903c43e5.svg.gz
+ DEBUG [0fff4346] 	
+  INFO [0fff4346] Finished in 13.057 seconds with exit status 0 (successful).
+ DEBUG [e46bbf3a] Running if test ! -d /home/deploy/apps/rails-tutorial/releases/20190515021746; then echo "Directory does not exist '/home/deploy/apps/rails-tutorial/releases/20190515021746'" 1>&2; false; fi as deploy@18.222.233.192
+ DEBUG [e46bbf3a] Command: if test ! -d /home/deploy/apps/rails-tutorial/releases/20190515021746; then echo "Directory does not exist '/home/deploy/apps/rails-tutorial/releases/20190515021746'" 1>&2; false; fi
+ DEBUG [aa69d3f2] Finished in 0.717 seconds with exit status 0 (successful).
+  INFO [e1892a37] Running /usr/bin/env mkdir -p /home/deploy/apps/rails-tutorial/releases/20190515021746/assets_manifest_backup as deploy@18.222.233.192
+ DEBUG [e1892a37] Command: cd /home/deploy/apps/rails-tutorial/releases/20190515021746 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env mkdir -p /home/deploy/apps/rails-tutorial/releases/20190515021746/assets_manifest_backup )
+  INFO [e9fb867f] Finished in 0.714 seconds with exit status 0 (successful).
+ DEBUG [0fa93db3] Running /usr/bin/env ls /home/deploy/apps/rails-tutorial/releases/20190515021746/public/assets/.sprockets-manifest* as deploy@18.222.233.192
+ DEBUG [0fa93db3] Command: cd /home/deploy/apps/rails-tutorial/releases/20190515021746 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env ls /home/deploy/apps/rails-tutorial/releases/20190515021746/public/assets/.sprockets-manifest* )
+ DEBUG [b20deae4] 	/home/deploy/apps/rails-tutorial/releases/20190515021746/public/assets/.sprockets-manifest-ca196378cd35eccabe1d285a5c202999.json
+ DEBUG [b20deae4] 	
+ DEBUG [b20deae4] Finished in 0.720 seconds with exit status 0 (successful).
+ DEBUG [01378252] Running /usr/bin/env ls /home/deploy/apps/rails-tutorial/releases/20190515021746/public/assets/.sprockets-manifest* as deploy@18.222.233.192
+ DEBUG [01378252] Command: cd /home/deploy/apps/rails-tutorial/releases/20190515021746 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env ls /home/deploy/apps/rails-tutorial/releases/20190515021746/public/assets/.sprockets-manifest* )
+ DEBUG [7f60e455] 	/home/deploy/apps/rails-tutorial/releases/20190515021746/public/assets/.sprockets-manifest-ca196378cd35eccabe1d285a5c202999.json
+ DEBUG [7f60e455] 	
+ DEBUG [7f60e455] Finished in 0.717 seconds with exit status 0 (successful).
+  INFO [3340792f] Running /usr/bin/env cp /home/deploy/apps/rails-tutorial/releases/20190515021746/public/assets/.sprockets-manifest-ca196378cd35eccabe1d285a5c202999.json /home/deploy/apps/rails-tutorial/releases/20190515021746/assets_manifest_backup as deploy@18.222.233.192
+ DEBUG [3340792f] Command: cd /home/deploy/apps/rails-tutorial/releases/20190515021746 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env cp /home/deploy/apps/rails-tutorial/releases/20190515021746/public/assets/.sprockets-manifest-ca196378cd35eccabe1d285a5c202999.json /home/deploy/apps/rails-tutorial/releases/20190515021746/assets_manifest_backup )
+  INFO [186917ca] Finished in 0.720 seconds with exit status 0 (successful).
+  INFO [deploy:migrate] Run `rake db:migrate`
+ DEBUG [31c52623] Running if test ! -d /home/deploy/apps/rails-tutorial/releases/20190515021746; then echo "Directory does not exist '/home/deploy/apps/rails-tutorial/releases/20190515021746'" 1>&2; false; fi as deploy@18.222.233.192
+ DEBUG [31c52623] Command: if test ! -d /home/deploy/apps/rails-tutorial/releases/20190515021746; then echo "Directory does not exist '/home/deploy/apps/rails-tutorial/releases/20190515021746'" 1>&2; false; fi
+ DEBUG [a8a22fc5] Finished in 0.715 seconds with exit status 0 (successful).
+  INFO [1d1588f1] Running $HOME/.rbenv/bin/rbenv exec bundle exec rake db:migrate as deploy@18.222.233.192
+ DEBUG [1d1588f1] Command: cd /home/deploy/apps/rails-tutorial/releases/20190515021746 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" RAILS_ENV="production" ; $HOME/.rbenv/bin/rbenv exec bundle exec rake db:migrate )
+ DEBUG [9b26033f] 	rake aborted!
+ DEBUG [9b26033f] 	
+ DEBUG [9b26033f] 	Cannot load `Rails.application.database_configuration`:
+ DEBUG [9b26033f] 	
+ DEBUG [9b26033f] 	Could not load database configuration. No such file - ["config/database.yml"]
+ DEBUG [9b26033f] 	
+ DEBUG [9b26033f] 	/home/deploy/apps/rails-tutorial/shared/bundle/ruby/2.5.0/gems/railties-5.1.4/lib/rails/application/configuration.rb:139:in `database_configuration'
+ DEBUG [9b26033f] 	
+ DEBUG [9b26033f] 	/home/deploy/apps/rails-tutorial/shared/bundle/ruby/2.5.0/gems/activerecord-5.1.4/lib/active_record/railtie.rb:121:in `block (2 levels) in <class:Railtie>'
+ DEBUG [9b26033f] 	
+ DEBUG [9b26033f] 	/home/deploy/apps/rails-tutorial/shared/bundle/ruby/2.5.0/gems/activesupport-5.1.4/lib/active_support/lazy_load_hooks.rb:69:in `instance_eval'
+ DEBUG [9b26033f] 	
+ DEBUG [9b26033f] 	/home/deploy/apps/rails-tutorial/shared/bundle/ruby/2.5.0/gems/activesupport-5.1.4/lib/active_support/lazy_load_hooks.rb:69:in `block in execute_hook'
+ DEBUG [9b26033f] 	
+ DEBUG [9b26033f] 	/home/deploy/apps/rails-tutorial/shared/bundle/ruby/2.5.0/gems/activesupport-5.1.4/lib/active_support/lazy_load_hooks.rb:60:in `with_execution_control'
+ DEBUG [9b26033f] 	
+ DEBUG [9b26033f] 	/home/deploy/apps/rails-tutorial/shared/bundle/ruby/2.5.0/gems/activesupport-5.1.4/lib/active_support/lazy_load_hooks.rb:65:in `execute_hook'
+ DEBUG [9b26033f] 	
+ DEBUG [9b26033f] 	/home/deploy/apps/rails-tutorial/shared/bundle/ruby/2.5.0/gems/activesupport-5.1.4/lib/active_support/lazy_load_hooks.rb:50:in `block in run_load_hooks'
+ DEBUG [9b26033f] 	
+ DEBUG [9b26033f] 	/home/deploy/apps/rails-tutorial/shared/bundle/ruby/2.5.0/gems/activesupport-5.1.4/lib/active_support/lazy_load_hooks.rb:49:in `each'
+ DEBUG [9b26033f] 	
+ DEBUG [9b26033f] 	/home/deploy/apps/rails-tutorial/shared/bundle/ruby/2.5.0/gems/activesupport-5.1.4/lib/active_support/lazy_load_hooks.rb:49:in `run_load_hooks'
+ DEBUG [9b26033f] 	
+ DEBUG [9b26033f] 	/home/deploy/apps/rails-tutorial/shared/bundle/ruby/2.5.0/gems/activerecord-5.1.4/lib/active_record/base.rb:326:in `<module:ActiveRecord>'
+ DEBUG [9b26033f] 	
+ DEBUG [9b26033f] 	/home/deploy/apps/rails-tutorial/shared/bundle/ruby/2.5.0/gems/activerecord-5.1.4/lib/active_record/base.rb:25:in `<top (required)>'
+ DEBUG [9b26033f] 	
+ DEBUG [9b26033f] 	/home/deploy/apps/rails-tutorial/shared/bundle/ruby/2.5.0/gems/activesupport-5.1.4/lib/active_support/dependencies.rb:292:in `require'
+ DEBUG [9b26033f] 	
+ DEBUG [9b26033f] 	/home/deploy/apps/rails-tutorial/shared/bundle/ruby/2.5.0/gems/activesupport-5.1.4/lib/active_support/dependencies.rb:292:in `block in require'
+ DEBUG [9b26033f] 	
+ DEBUG [9b26033f] 	/home/deploy/apps/rails-tutorial/shared/bundle/ruby/2.5.0/gems/activesupport-5.1.4/lib/active_support/dependencies.rb:258:in `load_dependency'
+ DEBUG [9b26033f] 	
+ DEBUG [9b26033f] 	/home/deploy/apps/rails-tutori
+ DEBUG [9b26033f] 	al/shared/bundle/ruby/2.5.0/gems/activesupport-5.1.4/lib/active_support/dependencies.rb:292:in `require'
+ DEBUG [9b26033f] 	
+ DEBUG [9b26033f] 	/home/deploy/apps/rails-tutorial/shared/bundle/ruby/2.5.0/gems/activerecord-5.1.4/lib/active_record/tasks/mysql_database_tasks.rb:6:in `<class:MySQLDatabaseTasks>'
+ DEBUG [9b26033f] 	
+ DEBUG [9b26033f] 	/home/deploy/apps/rails-tutorial/shared/bundle/ruby/2.5.0/gems/activerecord-5.1.4/lib/active_record/tasks/mysql_database_tasks.rb:3:in `<module:Tasks>'
+ DEBUG [9b26033f] 	
+ DEBUG [9b26033f] 	/home/deploy/apps/rails-tutorial/shared/bundle/ruby/2.5.0/gems/activerecord-5.1.4/lib/active_record/tasks/mysql_database_tasks.rb:2:in `<module:ActiveRecord>'
+ DEBUG [9b26033f] 	
+ DEBUG [9b26033f] 	/home/deploy/apps/rails-tutorial/shared/bundle/ruby/2.5.0/gems/activerecord-5.1.4/lib/active_record/tasks/mysql_database_tasks.rb:1:in `<top (required)>'
+ DEBUG [9b26033f] 	
+ DEBUG [9b26033f] 	/home/deploy/apps/rails-tutorial/shared/bundle/ruby/2.5.0/gems/activesupport-5.1.4/lib/active_support/dependencies.rb:292:in `require'
+ DEBUG [9b26033f] 	
+ DEBUG [9b26033f] 	/home/deploy/apps/rails-tutorial/shared/bundle/ruby/2.5.0/gems/activesupport-5.1.4/lib/active_support/dependencies.rb:292:in `block in require'
+ DEBUG [9b26033f] 	
+ DEBUG [9b26033f] 	/home/deploy/apps/rails-tutorial/shared/bundle/ruby/2.5.0/gems/activesupport-5.1.4/lib/active_support/dependencies.rb:258:in `load_dependency'
+ DEBUG [9b26033f] 	
+ DEBUG [9b26033f] 	/home/deploy/apps/rails-tutorial/shared/bundle/ruby/2.5.0/gems/activesupport-5.1.4/lib/active_support/dependencies.rb:292:in `require'
+ DEBUG [9b26033f] 	
+ DEBUG [9b26033f] 	/home/deploy/apps/rails-tutorial/shared/bundle/ruby/2.5.0/gems/activerecord-5.1.4/lib/active_record/tasks/database_tasks.rb:74:in `<module:DatabaseTasks>'
+ DEBUG [9b26033f] 	
+ DEBUG [9b26033f] 	/home/deploy/apps/rails-tutorial/shared/bundle/ruby/2.5.0/gems/activerecord-5.1.4/lib/active_record/tasks/database_tasks.rb:35:in `<module:Tasks>'
+ DEBUG [9b26033f] 	
+ DEBUG [9b26033f] 	/home/deploy/apps/rails-tutorial/shared/bundle/ruby/2.5.0/gems/activerecord-5.1.4/lib/active_record/tasks/database_tasks.rb:2:in `<module:ActiveRecord>'
+ DEBUG [9b26033f] 	
+ DEBUG [9b26033f] 	/home/deploy/apps/rails-tutorial/shared/bundle/ruby/2.5.0/gems/activerecord-5.1.4/lib/active_record/tasks/database_tasks.rb:1:in `<top (required)>'
+ DEBUG [9b26033f] 	
+ DEBUG [9b26033f] 	/home/deploy/apps/rails-tutorial/shared/bundle/ruby/2.5.0/gems/activesupport-5.1.4/lib/active_support/dependencies.rb:292:in `require'
+ DEBUG [9b26033f] 	
+ DEBUG [9b26033f] 	/home/deploy/apps/r
+ DEBUG [9b26033f] 	ails-tutorial/shared/bundle/ruby/2.5.0/gems/activesupport-5.1.4/lib/active_support/dependencies.rb:292:in `block in require'
+ DEBUG [9b26033f] 	
+ DEBUG [9b26033f] 	/home/deploy/apps/rails-tutorial/shared/bundle/ruby/2.5.0/gems/activesupport-5.1.4/lib/active_support/dependencies.rb:258:in `load_dependency'
+ DEBUG [9b26033f] 	
+ DEBUG [9b26033f] 	/home/deploy/apps/rails-tutorial/shared/bundle/ruby/2.5.0/gems/activesupport-5.1.4/lib/active_support/dependencies.rb:292:in `require'
+ DEBUG [9b26033f] 	
+ DEBUG [9b26033f] 	/home/deploy/apps/rails-tutorial/shared/bundle/ruby/2.5.0/gems/activerecord-5.1.4/lib/active_record/railtie.rb:34:in `block (3 levels) in <class:Railtie>'
+ DEBUG [9b26033f] 	
+ DEBUG [9b26033f] 	/home/deploy/apps/rails-tutorial/shared/bundle/ruby/2.5.0/gems/rake-12.3.0/exe/rake:27:in `<top (required)>'
+ DEBUG [9b26033f] 	
+ DEBUG [9b26033f] 	/home/deploy/.rbenv/versions/2.5.1/bin/bundle:23:in `load'
+ DEBUG [9b26033f] 	
+ DEBUG [9b26033f] 	/home/deploy/.rbenv/versions/2.5.1/bin/bundle:23:in `<main>'
+ DEBUG [9b26033f] 	
+ DEBUG [9b26033f] 	
+ DEBUG [9b26033f] 	Caused by:
+ DEBUG [9b26033f] 	
+ DEBUG [9b26033f] 	Could not load database configuration. No such file - ["config/database.yml"]
+ DEBUG [9b26033f] 	
+ DEBUG [9b26033f] 	/home/deploy/apps/rails-tutorial/shared/bundle/ruby/2.5.0/gems/railties-5.1.4/lib/rails/application/configuration.rb:139:in `database_configuration'
+ DEBUG [9b26033f] 	
+ DEBUG [9b26033f] 	/home/deploy/apps/rails-tutorial/shared/bundle/ruby/2.5.0/gems/activerecord-5.1.4/lib/active_record/railtie.rb:121:in `block (2 levels) in <class:Railtie>'
+ DEBUG [9b26033f] 	
+ DEBUG [9b26033f] 	/home/deploy/apps/rails-tutorial/shared/bundle/ruby/2.5.0/gems/activesupport-5.1.4/lib/active_support/lazy_load_hooks.rb:69:in `instance_eval'
+ DEBUG [9b26033f] 	
+ DEBUG [9b26033f] 	/home/deploy/apps/rails-tutorial/shared/bundle/ruby/2.5.0/gems/activesupport-5.1.4/lib/active_support/lazy_load_hooks.rb:69:in `block in execute_hook'
+ DEBUG [9b26033f] 	
+ DEBUG [9b26033f] 	/home/deploy/apps/rails-tutorial/shared/bundle/ruby/2.5.0/gems/activesupport-5.1.4/lib/active_support/lazy_load_hooks.rb:60:in `with_execution_control'
+ DEBUG [9b26033f] 	
+ DEBUG [9b26033f] 	/home/deploy/apps/rails-tutorial/shared/bundle/ruby/2.5.0/gems/activesupport-5.1.4/lib/active_support/lazy_load_hooks.rb:65:in `execute_hook'
+ DEBUG [9b26033f] 	
+ DEBUG [9b26033f] 	/home/deploy/apps/rails-tutorial/shared/bundle/ruby/2.5.0/gems/activesupport-5.1.4/lib/active_support/lazy_load_hooks.rb:50:in `block in run_load_hooks'
+ DEBUG [9b26033f] 	
+ DEBUG [9b26033f] 	/home/deploy/apps/rails-tutorial/shared/bundle/ruby/2.5.0/gems/activesupport-5.1.4/lib/active_support/lazy_load_hooks.rb:49:in `each'
+ DEBUG [9b26033f] 	
+ DEBUG [9b26033f] 	/home/deploy/apps/rails-tutorial/shared/bundle/ruby/2.5.0/gems/activesupport-5.1.4/lib/active_support/lazy_load_hooks.rb:49:in `run_load_hooks'
+ DEBUG [9b26033f] 	
+ DEBUG [9b26033f] 	/home/deploy/apps/rails-tutorial/shared/bundle/ruby/2.5.0/gems/activerecord-5.1.4/lib/active_record/base.rb:326:in `<module:ActiveRecord>'
+ DEBUG [9b26033f] 	
+ DEBUG [9b26033f] 	/home/deploy/apps/rails-tutorial/shared/bundle/ruby/2.5.0/gems/activerecord-5.1.4/lib/active_record/base.rb:25:in `<top (required)>'
+ DEBUG [9b26033f] 	
+ DEBUG [9b26033f] 	/home/deploy/apps/rails-tutorial/shared/bundle/ruby/2.5.0/gems/activesupport-5.1.4/lib/active_support/dependencies.rb:292:in `require'
+ DEBUG [9b26033f] 	
+ DEBUG [9b26033f] 	/home/deploy/apps/rails-tutorial/shared/bundle/ruby/2.5.0/gems/activesupport-5.1.4/lib/active_support/dependencies.rb:292:in `block in require'
+ DEBUG [9b26033f] 	
+ DEBUG [9b26033f] 	/home/deploy/apps/rails-tutorial/shared/bundle/ruby/2.5.0/gems/activesupport-5.1.4/lib/active_support/dependencies.rb:258:in `load_dependency'
+ DEBUG [9b26033f] 	
+ DEBUG [9b26033f] 	/home/deploy/apps/rails-tutori
+ DEBUG [9b26033f] 	al/shared/bundle/ruby/2.5.0/gems/activesupport-5.1.4/lib/active_support/dependencies.rb:292:in `require'
+ DEBUG [9b26033f] 	
+ DEBUG [9b26033f] 	/home/deploy/apps/rails-tutorial/shared/bundle/ruby/2.5.0/gems/activerecord-5.1.4/lib/active_record/tasks/mysql_database_tasks.rb:6:in `<class:MySQLDatabaseTasks>'
+ DEBUG [9b26033f] 	
+ DEBUG [9b26033f] 	/home/deploy/apps/rails-tutorial/shared/bundle/ruby/2.5.0/gems/activerecord-5.1.4/lib/active_record/tasks/mysql_database_tasks.rb:3:in `<module:Tasks>'
+ DEBUG [9b26033f] 	
+ DEBUG [9b26033f] 	/home/deploy/apps/rails-tutorial/shared/bundle/ruby/2.5.0/gems/activerecord-5.1.4/lib/active_record/tasks/mysql_database_tasks.rb:2:in `<module:ActiveRecord>'
+ DEBUG [9b26033f] 	
+ DEBUG [9b26033f] 	/home/deploy/apps/rails-tutorial/shared/bundle/ruby/2.5.0/gems/activerecord-5.1.4/lib/active_record/tasks/mysql_database_tasks.rb:1:in `<top (required)>'
+ DEBUG [9b26033f] 	
+ DEBUG [9b26033f] 	/home/deploy/apps/rails-tutorial/shared/bundle/ruby/2.5.0/gems/activesupport-5.1.4/lib/active_support/dependencies.rb:292:in `require'
+ DEBUG [9b26033f] 	
+ DEBUG [9b26033f] 	/home/deploy/apps/rails-tutorial/shared/bundle/ruby/2.5.0/gems/activesupport-5.1.4/lib/active_support/dependencies.rb:292:in `block in require'
+ DEBUG [9b26033f] 	
+ DEBUG [9b26033f] 	/home/deploy/apps/rails-tutorial/shared/bundle/ruby/2.5.0/gems/activesupport-5.1.4/lib/active_support/dependencies.rb:258:in `load_dependency'
+ DEBUG [9b26033f] 	
+ DEBUG [9b26033f] 	/home/deploy/apps/rails-tutorial/shared/bundle/ruby/2.5.0/gems/activesupport-5.1.4/lib/active_support/dependencies.rb:292:in `require'
+ DEBUG [9b26033f] 	
+ DEBUG [9b26033f] 	/home/deploy/apps/rails-tutorial/shared/bundle/ruby/2.5.0/gems/activerecord-5.1.4/lib/active_record/tasks/database_tasks.rb:74:in `<module:DatabaseTasks>'
+ DEBUG [9b26033f] 	
+ DEBUG [9b26033f] 	/home/deploy/apps/rails-tutorial/shared/bundle/ruby/2.5.0/gems/activerecord-5.1.4/lib/active_record/tasks/database_tasks.rb:35:in `<module:Tasks>'
+ DEBUG [9b26033f] 	
+ DEBUG [9b26033f] 	/home/deploy/apps/rails-tutorial/shared/bundle/ruby/2.5.0/gems/activerecord-5.1.4/lib/active_record/tasks/database_tasks.rb:2:in `<module:ActiveRecord>'
+ DEBUG [9b26033f] 	
+ DEBUG [9b26033f] 	/home/deploy/apps/rails-tutorial/shared/bundle/ruby/2.5.0/gems/activerecord-5.1.4/lib/active_record/tasks/database_tasks.rb:1:in `<top (required)>'
+ DEBUG [9b26033f] 	
+ DEBUG [9b26033f] 	/home/deploy/apps/rails-tutorial/shared/bundle/ruby/2.5.0/gems/activesupport-5.1.4/lib/active_support/dependencies.rb:292:in `require'
+ DEBUG [9b26033f] 	
+ DEBUG [9b26033f] 	/home/deploy/apps/r
+ DEBUG [9b26033f] 	ails-tutorial/shared/bundle/ruby/2.5.0/gems/activesupport-5.1.4/lib/active_support/dependencies.rb:292:in `block in require'
+ DEBUG [9b26033f] 	
+ DEBUG [9b26033f] 	/home/deploy/apps/rails-tutorial/shared/bundle/ruby/2.5.0/gems/activesupport-5.1.4/lib/active_support/dependencies.rb:258:in `load_dependency'
+ DEBUG [9b26033f] 	
+ DEBUG [9b26033f] 	/home/deploy/apps/rails-tutorial/shared/bundle/ruby/2.5.0/gems/activesupport-5.1.4/lib/active_support/dependencies.rb:292:in `require'
+ DEBUG [9b26033f] 	
+ DEBUG [9b26033f] 	/home/deploy/apps/rails-tutorial/shared/bundle/ruby/2.5.0/gems/activerecord-5.1.4/lib/active_record/railtie.rb:34:in `block (3 levels) in <class:Railtie>'
+ DEBUG [9b26033f] 	
+ DEBUG [9b26033f] 	/home/deploy/apps/rails-tutorial/shared/bundle/ruby/2.5.0/gems/rake-12.3.0/exe/rake:27:in `<top (required)>'
+ DEBUG [9b26033f] 	
+ DEBUG [9b26033f] 	/home/deploy/.rbenv/versions/2.5.1/bin/bundle:23:in `load'
+ DEBUG [9b26033f] 	
+ DEBUG [9b26033f] 	/home/deploy/.rbenv/versions/2.5.1/bin/bundle:23:in `<main>'
+ DEBUG [9b26033f] 	
+ DEBUG [9b26033f] 	Tasks: TOP => db:migrate => db:load_config
+ DEBUG [9b26033f] 	
+ DEBUG [9b26033f] 	(See full trace by running task with --trace)
+ DEBUG [9b26033f] 	
+  INFO ---------------------------------------------------------------------------
+  INFO START 2019-05-15 09:34:44 +0700 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO rbenv: rbenv_ruby is not set; ruby version will be defined by the remote hosts via rbenv
+  INFO [7568911d] Running /usr/bin/env mkdir -p /tmp as deploy@18.222.233.192
+ DEBUG [7568911d] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env mkdir -p /tmp )
+  INFO [ae45bda7] Finished in 3.504 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-rails-tutorial-production-FRAMGIA\nguyen.t.h.lanh.sh 0.0%
+  INFO Uploading /tmp/git-ssh-rails-tutorial-production-FRAMGIA\nguyen.t.h.lanh.sh 100.0%
+  INFO [efbef6f3] Running /usr/bin/env chmod 700 /tmp/git-ssh-rails-tutorial-production-FRAMGIA\\nguyen.t.h.lanh.sh as deploy@18.222.233.192
+ DEBUG [efbef6f3] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env chmod 700 /tmp/git-ssh-rails-tutorial-production-FRAMGIA\\nguyen.t.h.lanh.sh )
+  INFO [3a3018e2] Finished in 0.706 seconds with exit status 0 (successful).
+  INFO [25435b8d] Running /usr/bin/env git ls-remote git@github.com:lanhlanh/rails-tutorial.git HEAD as deploy@18.222.233.192
+ DEBUG [25435b8d] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-rails-tutorial-production-FRAMGIA\nguyen.t.h.lanh.sh" ; /usr/bin/env git ls-remote git@github.com:lanhlanh/rails-tutorial.git HEAD )
+ DEBUG [1f69b225] 	38f4ec23bd9d8b821a1edfea8640cee79c7e317e
+ DEBUG [1f69b225] 		HEAD
+  INFO [1f69b225] Finished in 1.723 seconds with exit status 0 (successful).
+  INFO [1083cdf8] Running /usr/bin/env mkdir -p /home/deploy/apps/rails-tutorial/shared /home/deploy/apps/rails-tutorial/releases as deploy@18.222.233.192
+ DEBUG [1083cdf8] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env mkdir -p /home/deploy/apps/rails-tutorial/shared /home/deploy/apps/rails-tutorial/releases )
+  INFO [1362648a] Finished in 0.660 seconds with exit status 0 (successful).
+  INFO [2446c87e] Running /usr/bin/env mkdir -p /home/deploy/apps/rails-tutorial/shared/bin /home/deploy/apps/rails-tutorial/shared/log /home/deploy/apps/rails-tutorial/shared/tmp/pids /home/deploy/apps/rails-tutorial/shared/tmp/cache /home/deploy/apps/rails-tutorial/shared/tmp/sockets /home/deploy/apps/rails-tutorial/shared/vendor/bundle /home/deploy/apps/rails-tutorial/shared/public/system /home/deploy/apps/rails-tutorial/shared/public/assets as deploy@18.222.233.192
+ DEBUG [2446c87e] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env mkdir -p /home/deploy/apps/rails-tutorial/shared/bin /home/deploy/apps/rails-tutorial/shared/log /home/deploy/apps/rails-tutorial/shared/tmp/pids /home/deploy/apps/rails-tutorial/shared/tmp/cache /home/deploy/apps/rails-tutorial/shared/tmp/sockets /home/deploy/apps/rails-tutorial/shared/vendor/bundle /home/deploy/apps/rails-tutorial/shared/public/system /home/deploy/apps/rails-tutorial/shared/public/assets )
+  INFO [7a06a107] Finished in 0.700 seconds with exit status 0 (successful).
+  INFO [802cabc8] Running /usr/bin/env mkdir -p /home/deploy/apps/rails-tutorial/shared/config as deploy@18.222.233.192
+ DEBUG [802cabc8] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env mkdir -p /home/deploy/apps/rails-tutorial/shared/config )
+  INFO [2a977bdf] Finished in 0.706 seconds with exit status 0 (successful).
+ DEBUG [2b389beb] Running [ -f /home/deploy/apps/rails-tutorial/shared/config/database.yml ] as deploy@18.222.233.192
+ DEBUG [2b389beb] Command: [ -f /home/deploy/apps/rails-tutorial/shared/config/database.yml ]
+ DEBUG [45465de4] Finished in 0.707 seconds with exit status 1 (failed).
+ ERROR linked file /home/deploy/apps/rails-tutorial/shared/config/database.yml does not exist on 18.222.233.192
+  INFO ---------------------------------------------------------------------------
+  INFO START 2019-05-15 09:36:22 +0700 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO rbenv: rbenv_ruby is not set; ruby version will be defined by the remote hosts via rbenv
+  INFO [8953269d] Running /usr/bin/env mkdir -p /tmp as deploy@18.222.233.192
+ DEBUG [8953269d] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env mkdir -p /tmp )
+  INFO [61f8da71] Finished in 3.095 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-rails-tutorial-production-FRAMGIA\nguyen.t.h.lanh.sh 0.0%
+  INFO Uploading /tmp/git-ssh-rails-tutorial-production-FRAMGIA\nguyen.t.h.lanh.sh 100.0%
+  INFO [e178842d] Running /usr/bin/env chmod 700 /tmp/git-ssh-rails-tutorial-production-FRAMGIA\\nguyen.t.h.lanh.sh as deploy@18.222.233.192
+ DEBUG [e178842d] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env chmod 700 /tmp/git-ssh-rails-tutorial-production-FRAMGIA\\nguyen.t.h.lanh.sh )
+  INFO [cf222612] Finished in 0.715 seconds with exit status 0 (successful).
+  INFO [8715531c] Running /usr/bin/env git ls-remote git@github.com:lanhlanh/rails-tutorial.git HEAD as deploy@18.222.233.192
+ DEBUG [8715531c] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-rails-tutorial-production-FRAMGIA\nguyen.t.h.lanh.sh" ; /usr/bin/env git ls-remote git@github.com:lanhlanh/rails-tutorial.git HEAD )
+ DEBUG [c31239a5] 	38f4ec23bd9d8b821a1edfea8640cee79c7e317e
+ DEBUG [c31239a5] 		HEAD
+  INFO [c31239a5] Finished in 1.714 seconds with exit status 0 (successful).
+  INFO [d4cfaed5] Running /usr/bin/env mkdir -p /home/deploy/apps/rails-tutorial/shared /home/deploy/apps/rails-tutorial/releases as deploy@18.222.233.192
+ DEBUG [d4cfaed5] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env mkdir -p /home/deploy/apps/rails-tutorial/shared /home/deploy/apps/rails-tutorial/releases )
+  INFO [7f0ca177] Finished in 0.677 seconds with exit status 0 (successful).
+  INFO [c4a6f554] Running /usr/bin/env mkdir -p /home/deploy/apps/rails-tutorial/shared/bin /home/deploy/apps/rails-tutorial/shared/log /home/deploy/apps/rails-tutorial/shared/tmp/pids /home/deploy/apps/rails-tutorial/shared/tmp/cache /home/deploy/apps/rails-tutorial/shared/tmp/sockets /home/deploy/apps/rails-tutorial/shared/vendor/bundle /home/deploy/apps/rails-tutorial/shared/public/system /home/deploy/apps/rails-tutorial/shared/public/assets as deploy@18.222.233.192
+ DEBUG [c4a6f554] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env mkdir -p /home/deploy/apps/rails-tutorial/shared/bin /home/deploy/apps/rails-tutorial/shared/log /home/deploy/apps/rails-tutorial/shared/tmp/pids /home/deploy/apps/rails-tutorial/shared/tmp/cache /home/deploy/apps/rails-tutorial/shared/tmp/sockets /home/deploy/apps/rails-tutorial/shared/vendor/bundle /home/deploy/apps/rails-tutorial/shared/public/system /home/deploy/apps/rails-tutorial/shared/public/assets )
+  INFO [4eea40cc] Finished in 0.708 seconds with exit status 0 (successful).
+  INFO [5b47dc13] Running /usr/bin/env mkdir -p /home/deploy/apps/rails-tutorial/shared/config as deploy@18.222.233.192
+ DEBUG [5b47dc13] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env mkdir -p /home/deploy/apps/rails-tutorial/shared/config )
+  INFO [03ce65e6] Finished in 0.713 seconds with exit status 0 (successful).
+ DEBUG [1b41f5fa] Running [ -f /home/deploy/apps/rails-tutorial/shared/config/database.yml ] as deploy@18.222.233.192
+ DEBUG [1b41f5fa] Command: [ -f /home/deploy/apps/rails-tutorial/shared/config/database.yml ]
+ DEBUG [17f4d7f2] Finished in 0.712 seconds with exit status 1 (failed).
+ ERROR linked file /home/deploy/apps/rails-tutorial/shared/config/database.yml does not exist on 18.222.233.192
+  INFO ---------------------------------------------------------------------------
+  INFO START 2019-05-15 09:46:02 +0700 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO rbenv: rbenv_ruby is not set; ruby version will be defined by the remote hosts via rbenv
+  INFO [16445db0] Running /usr/bin/env mkdir -p /tmp as deploy@18.222.233.192
+ DEBUG [16445db0] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env mkdir -p /tmp )
+  INFO [2c93b5ce] Finished in 3.080 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-rails-tutorial-production-FRAMGIA\nguyen.t.h.lanh.sh 0.0%
+  INFO Uploading /tmp/git-ssh-rails-tutorial-production-FRAMGIA\nguyen.t.h.lanh.sh 100.0%
+  INFO [7d04a9bd] Running /usr/bin/env chmod 700 /tmp/git-ssh-rails-tutorial-production-FRAMGIA\\nguyen.t.h.lanh.sh as deploy@18.222.233.192
+ DEBUG [7d04a9bd] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env chmod 700 /tmp/git-ssh-rails-tutorial-production-FRAMGIA\\nguyen.t.h.lanh.sh )
+  INFO [e9cf2cb0] Finished in 0.705 seconds with exit status 0 (successful).
+  INFO [935a139b] Running /usr/bin/env git ls-remote git@github.com:lanhlanh/rails-tutorial.git HEAD as deploy@18.222.233.192
+ DEBUG [935a139b] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-rails-tutorial-production-FRAMGIA\nguyen.t.h.lanh.sh" ; /usr/bin/env git ls-remote git@github.com:lanhlanh/rails-tutorial.git HEAD )
+ DEBUG [cb54e484] 	38f4ec23bd9d8b821a1edfea8640cee79c7e317e
+ DEBUG [cb54e484] 		HEAD
+  INFO [cb54e484] Finished in 1.901 seconds with exit status 0 (successful).
+  INFO [8e7e211b] Running /usr/bin/env mkdir -p /home/deploy/apps/rails-tutorial/shared /home/deploy/apps/rails-tutorial/releases as deploy@18.222.233.192
+ DEBUG [8e7e211b] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env mkdir -p /home/deploy/apps/rails-tutorial/shared /home/deploy/apps/rails-tutorial/releases )
+  INFO [3f7a8fae] Finished in 0.667 seconds with exit status 0 (successful).
+  INFO [a7e51177] Running /usr/bin/env mkdir -p /home/deploy/apps/rails-tutorial/shared/bin /home/deploy/apps/rails-tutorial/shared/log /home/deploy/apps/rails-tutorial/shared/tmp/pids /home/deploy/apps/rails-tutorial/shared/tmp/cache /home/deploy/apps/rails-tutorial/shared/tmp/sockets /home/deploy/apps/rails-tutorial/shared/vendor/bundle /home/deploy/apps/rails-tutorial/shared/public/system /home/deploy/apps/rails-tutorial/shared/public/assets as deploy@18.222.233.192
+ DEBUG [a7e51177] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env mkdir -p /home/deploy/apps/rails-tutorial/shared/bin /home/deploy/apps/rails-tutorial/shared/log /home/deploy/apps/rails-tutorial/shared/tmp/pids /home/deploy/apps/rails-tutorial/shared/tmp/cache /home/deploy/apps/rails-tutorial/shared/tmp/sockets /home/deploy/apps/rails-tutorial/shared/vendor/bundle /home/deploy/apps/rails-tutorial/shared/public/system /home/deploy/apps/rails-tutorial/shared/public/assets )
+  INFO [56cdf9c7] Finished in 0.703 seconds with exit status 0 (successful).
+  INFO [aaf9dcdb] Running /usr/bin/env mkdir -p /home/deploy/apps/rails-tutorial/shared/config as deploy@18.222.233.192
+ DEBUG [aaf9dcdb] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env mkdir -p /home/deploy/apps/rails-tutorial/shared/config )
+  INFO [b66eb3bf] Finished in 0.705 seconds with exit status 0 (successful).
+ DEBUG [4220a216] Running [ -f /home/deploy/apps/rails-tutorial/shared/config/database.yml ] as deploy@18.222.233.192
+ DEBUG [4220a216] Command: [ -f /home/deploy/apps/rails-tutorial/shared/config/database.yml ]
+ DEBUG [4187a485] Finished in 0.707 seconds with exit status 0 (successful).
+ DEBUG [5ee6d2e4] Running [ -f /home/deploy/apps/rails-tutorial/shared/puma.rb ] as deploy@18.222.233.192
+ DEBUG [5ee6d2e4] Command: [ -f /home/deploy/apps/rails-tutorial/shared/puma.rb ]
+ DEBUG [b8bc3a2f] Finished in 0.709 seconds with exit status 0 (successful).
+ DEBUG [48a611d0] Running [ -f /home/deploy/apps/rails-tutorial/current/REVISION ] as deploy@18.222.233.192
+ DEBUG [48a611d0] Command: [ -f /home/deploy/apps/rails-tutorial/current/REVISION ]
+ DEBUG [c4d41a6a] Finished in 0.704 seconds with exit status 1 (failed).
+ DEBUG [63f5888f] Running [ -f /home/deploy/apps/rails-tutorial/repo/HEAD ] as deploy@18.222.233.192
+ DEBUG [63f5888f] Command: [ -f /home/deploy/apps/rails-tutorial/repo/HEAD ]
+ DEBUG [4644bed7] Finished in 0.706 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/deploy/apps/rails-tutorial/repo
+ DEBUG [23a47a4d] Running if test ! -d /home/deploy/apps/rails-tutorial/repo; then echo "Directory does not exist '/home/deploy/apps/rails-tutorial/repo'" 1>&2; false; fi as deploy@18.222.233.192
+ DEBUG [23a47a4d] Command: if test ! -d /home/deploy/apps/rails-tutorial/repo; then echo "Directory does not exist '/home/deploy/apps/rails-tutorial/repo'" 1>&2; false; fi
+ DEBUG [f0930954] Finished in 0.706 seconds with exit status 0 (successful).
+  INFO [ac567e1d] Running /usr/bin/env git remote set-url origin git@github.com:lanhlanh/rails-tutorial.git as deploy@18.222.233.192
+ DEBUG [ac567e1d] Command: cd /home/deploy/apps/rails-tutorial/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-rails-tutorial-production-FRAMGIA\nguyen.t.h.lanh.sh" ; /usr/bin/env git remote set-url origin git@github.com:lanhlanh/rails-tutorial.git )
+  INFO [8b24c004] Finished in 0.714 seconds with exit status 0 (successful).
+  INFO [ea24767b] Running /usr/bin/env git remote update --prune as deploy@18.222.233.192
+ DEBUG [ea24767b] Command: cd /home/deploy/apps/rails-tutorial/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-rails-tutorial-production-FRAMGIA\nguyen.t.h.lanh.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [e8fd2184] 	Fetching origin
+ DEBUG [e8fd2184] 	
+ DEBUG [e8fd2184] 	remote: Enumerating objects: 11, done.[K
+ DEBUG [e8fd2184] 	
+ DEBUG [e8fd2184] 	remote: Counting objects:   9% (1/11)   [K
+ DEBUG [e8fd2184] 	remote: Counting objects:  18% (2/11)   [K
+ DEBUG [e8fd2184] 	remote: Counting objects:  27% (3/11)   [K
+ DEBUG [e8fd2184] 	remote: Counting objects:  36% (4/11)   [K
+ DEBUG [e8fd2184] 	remote: Counting objects:  45% (5/11)   [K
+ DEBUG [e8fd2184] 	remote: Counting objects:  54% (6/11)   [K
+ DEBUG [e8fd2184] 	remote: Counting objects:  63% (7/11)   [K
+ DEBUG [e8fd2184] 	remote: Counting objects:  72% (8/11)   [K
+ DEBUG [e8fd2184] 	remote: Counting objects:  81% (9/11)   [K
+ DEBUG [e8fd2184] 	remote: Counting objects:  90% (10/11)   [K
+ DEBUG [e8fd2184] 	remote: Counting objects: 100% (11/11)   [K
+ DEBUG [e8fd2184] 	remote: Counting objects: 100% (11/11), done.[K
+ DEBUG [e8fd2184] 	
+ DEBUG [e8fd2184] 	remote: Compressing objects:  33% (1/3)   [K
+ DEBUG [e8fd2184] 	remote: Compressing objects:  66% (2/3)   [K
+ DEBUG [e8fd2184] 	remote: Compressing objects: 100% (3/3)   [K
+ DEBUG [e8fd2184] 	remote: Compressing objects: 100% (3/3), done.[K
+ DEBUG [e8fd2184] 	
+ DEBUG [e8fd2184] 	remote: Total 6 (delta 3), reused 6 (delta 3), pack-reused 0[K
+ DEBUG [e8fd2184] 	
+ DEBUG [e8fd2184] 	Unpacking objects:  16% (1/6)   
+ DEBUG [e8fd2184] 	Unpacking objects:  33% (2/6)   
+ DEBUG [e8fd2184] 	Unpacking objects:  50% (3/6)   
+ DEBUG [e8fd2184] 	Unpacking objects:  66% (4/6)   
+ DEBUG [e8fd2184] 	Unpacking objects:  83% (5/6)   
+ DEBUG [e8fd2184] 	Unpacking objects: 100% (6/6)   
+ DEBUG [e8fd2184] 	Unpacking objects: 100% (6/6), done.
+ DEBUG [e8fd2184] 	
+ DEBUG [e8fd2184] 	From github.com:lanhlanh/rails-tutorial
+ DEBUG [e8fd2184] 	
+ DEBUG [e8fd2184] 	   e131eeb..38f4ec2  master     -> master
+ DEBUG [e8fd2184] 	
+  INFO [e8fd2184] Finished in 2.007 seconds with exit status 0 (successful).
+ DEBUG [d3fd7ded] Running if test ! -d /home/deploy/apps/rails-tutorial/repo; then echo "Directory does not exist '/home/deploy/apps/rails-tutorial/repo'" 1>&2; false; fi as deploy@18.222.233.192
+ DEBUG [d3fd7ded] Command: if test ! -d /home/deploy/apps/rails-tutorial/repo; then echo "Directory does not exist '/home/deploy/apps/rails-tutorial/repo'" 1>&2; false; fi
+ DEBUG [ce2c541f] Finished in 0.453 seconds with exit status 0 (successful).
+  INFO [dde7128b] Running /usr/bin/env mkdir -p /home/deploy/apps/rails-tutorial/releases/20190515024613 as deploy@18.222.233.192
+ DEBUG [dde7128b] Command: cd /home/deploy/apps/rails-tutorial/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-rails-tutorial-production-FRAMGIA\nguyen.t.h.lanh.sh" ; /usr/bin/env mkdir -p /home/deploy/apps/rails-tutorial/releases/20190515024613 )
+  INFO [a8c0dd08] Finished in 0.709 seconds with exit status 0 (successful).
+  INFO [808016fa] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/deploy/apps/rails-tutorial/releases/20190515024613 as deploy@18.222.233.192
+ DEBUG [808016fa] Command: cd /home/deploy/apps/rails-tutorial/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-rails-tutorial-production-FRAMGIA\nguyen.t.h.lanh.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/deploy/apps/rails-tutorial/releases/20190515024613 )
+  INFO [f9c50627] Finished in 0.720 seconds with exit status 0 (successful).
+ DEBUG [625b2b1b] Running if test ! -d /home/deploy/apps/rails-tutorial/repo; then echo "Directory does not exist '/home/deploy/apps/rails-tutorial/repo'" 1>&2; false; fi as deploy@18.222.233.192
+ DEBUG [625b2b1b] Command: if test ! -d /home/deploy/apps/rails-tutorial/repo; then echo "Directory does not exist '/home/deploy/apps/rails-tutorial/repo'" 1>&2; false; fi
+ DEBUG [d55595e9] Finished in 0.707 seconds with exit status 0 (successful).
+ DEBUG [c0f40d07] Running /usr/bin/env git rev-list --max-count=1 master as deploy@18.222.233.192
+ DEBUG [c0f40d07] Command: cd /home/deploy/apps/rails-tutorial/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-rails-tutorial-production-FRAMGIA\nguyen.t.h.lanh.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [1ededd4d] 	38f4ec23bd9d8b821a1edfea8640cee79c7e317e
+ DEBUG [1ededd4d] 	
+ DEBUG [1ededd4d] Finished in 0.711 seconds with exit status 0 (successful).
+ DEBUG [7b6ae4d6] Running if test ! -d /home/deploy/apps/rails-tutorial/releases/20190515024613; then echo "Directory does not exist '/home/deploy/apps/rails-tutorial/releases/20190515024613'" 1>&2; false; fi as deploy@18.222.233.192
+ DEBUG [7b6ae4d6] Command: if test ! -d /home/deploy/apps/rails-tutorial/releases/20190515024613; then echo "Directory does not exist '/home/deploy/apps/rails-tutorial/releases/20190515024613'" 1>&2; false; fi
+ DEBUG [a7b56783] Finished in 0.706 seconds with exit status 0 (successful).
+  INFO [7b8fc576] Running /usr/bin/env echo "38f4ec23bd9d8b821a1edfea8640cee79c7e317e" > REVISION as deploy@18.222.233.192
+ DEBUG [7b8fc576] Command: cd /home/deploy/apps/rails-tutorial/releases/20190515024613 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env echo "38f4ec23bd9d8b821a1edfea8640cee79c7e317e" > REVISION )
+  INFO [fd77dc63] Finished in 0.709 seconds with exit status 0 (successful).
+  INFO [f3865f67] Running /usr/bin/env mkdir -p /home/deploy/apps/rails-tutorial/releases/20190515024613/config as deploy@18.222.233.192
+ DEBUG [f3865f67] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env mkdir -p /home/deploy/apps/rails-tutorial/releases/20190515024613/config )
+  INFO [07916132] Finished in 0.706 seconds with exit status 0 (successful).
+ DEBUG [3278bae8] Running [ -L /home/deploy/apps/rails-tutorial/releases/20190515024613/config/database.yml ] as deploy@18.222.233.192
+ DEBUG [3278bae8] Command: [ -L /home/deploy/apps/rails-tutorial/releases/20190515024613/config/database.yml ]
+ DEBUG [5bc5ad09] Finished in 0.706 seconds with exit status 1 (failed).
+ DEBUG [bc93d2ec] Running [ -f /home/deploy/apps/rails-tutorial/releases/20190515024613/config/database.yml ] as deploy@18.222.233.192
+ DEBUG [bc93d2ec] Command: [ -f /home/deploy/apps/rails-tutorial/releases/20190515024613/config/database.yml ]
+ DEBUG [a69ffd2c] Finished in 0.708 seconds with exit status 1 (failed).
+  INFO [0abe2faf] Running /usr/bin/env ln -s /home/deploy/apps/rails-tutorial/shared/config/database.yml /home/deploy/apps/rails-tutorial/releases/20190515024613/config/database.yml as deploy@18.222.233.192
+ DEBUG [0abe2faf] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env ln -s /home/deploy/apps/rails-tutorial/shared/config/database.yml /home/deploy/apps/rails-tutorial/releases/20190515024613/config/database.yml )
+  INFO [8fd63e02] Finished in 0.708 seconds with exit status 0 (successful).
+  INFO [245dd5a0] Running /usr/bin/env mkdir -p /home/deploy/apps/rails-tutorial/releases/20190515024613 /home/deploy/apps/rails-tutorial/releases/20190515024613/tmp /home/deploy/apps/rails-tutorial/releases/20190515024613/vendor /home/deploy/apps/rails-tutorial/releases/20190515024613/public as deploy@18.222.233.192
+ DEBUG [245dd5a0] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env mkdir -p /home/deploy/apps/rails-tutorial/releases/20190515024613 /home/deploy/apps/rails-tutorial/releases/20190515024613/tmp /home/deploy/apps/rails-tutorial/releases/20190515024613/vendor /home/deploy/apps/rails-tutorial/releases/20190515024613/public )
+  INFO [6a75ca3a] Finished in 0.710 seconds with exit status 0 (successful).
+ DEBUG [114403d8] Running [ -L /home/deploy/apps/rails-tutorial/releases/20190515024613/bin ] as deploy@18.222.233.192
+ DEBUG [114403d8] Command: [ -L /home/deploy/apps/rails-tutorial/releases/20190515024613/bin ]
+ DEBUG [d622b157] Finished in 0.708 seconds with exit status 1 (failed).
+ DEBUG [a650957d] Running [ -d /home/deploy/apps/rails-tutorial/releases/20190515024613/bin ] as deploy@18.222.233.192
+ DEBUG [a650957d] Command: [ -d /home/deploy/apps/rails-tutorial/releases/20190515024613/bin ]
+ DEBUG [c7a94ad1] Finished in 0.707 seconds with exit status 0 (successful).
+  INFO [44ec95c5] Running /usr/bin/env rm -rf /home/deploy/apps/rails-tutorial/releases/20190515024613/bin as deploy@18.222.233.192
+ DEBUG [44ec95c5] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env rm -rf /home/deploy/apps/rails-tutorial/releases/20190515024613/bin )
+  INFO [d96a67a4] Finished in 0.710 seconds with exit status 0 (successful).
+  INFO [e6b6adc0] Running /usr/bin/env ln -s /home/deploy/apps/rails-tutorial/shared/bin /home/deploy/apps/rails-tutorial/releases/20190515024613/bin as deploy@18.222.233.192
+ DEBUG [e6b6adc0] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env ln -s /home/deploy/apps/rails-tutorial/shared/bin /home/deploy/apps/rails-tutorial/releases/20190515024613/bin )
+  INFO [090fe752] Finished in 0.708 seconds with exit status 0 (successful).
+ DEBUG [37b21dcd] Running [ -L /home/deploy/apps/rails-tutorial/releases/20190515024613/log ] as deploy@18.222.233.192
+ DEBUG [37b21dcd] Command: [ -L /home/deploy/apps/rails-tutorial/releases/20190515024613/log ]
+ DEBUG [5a589363] Finished in 0.714 seconds with exit status 1 (failed).
+ DEBUG [a15d970d] Running [ -d /home/deploy/apps/rails-tutorial/releases/20190515024613/log ] as deploy@18.222.233.192
+ DEBUG [a15d970d] Command: [ -d /home/deploy/apps/rails-tutorial/releases/20190515024613/log ]
+ DEBUG [f302cedf] Finished in 0.706 seconds with exit status 0 (successful).
+  INFO [cfc19d37] Running /usr/bin/env rm -rf /home/deploy/apps/rails-tutorial/releases/20190515024613/log as deploy@18.222.233.192
+ DEBUG [cfc19d37] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env rm -rf /home/deploy/apps/rails-tutorial/releases/20190515024613/log )
+  INFO [91374ef5] Finished in 0.708 seconds with exit status 0 (successful).
+  INFO [a5f6e5b9] Running /usr/bin/env ln -s /home/deploy/apps/rails-tutorial/shared/log /home/deploy/apps/rails-tutorial/releases/20190515024613/log as deploy@18.222.233.192
+ DEBUG [a5f6e5b9] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env ln -s /home/deploy/apps/rails-tutorial/shared/log /home/deploy/apps/rails-tutorial/releases/20190515024613/log )
+  INFO [f58507a9] Finished in 0.707 seconds with exit status 0 (successful).
+ DEBUG [41fd9f63] Running [ -L /home/deploy/apps/rails-tutorial/releases/20190515024613/tmp/pids ] as deploy@18.222.233.192
+ DEBUG [41fd9f63] Command: [ -L /home/deploy/apps/rails-tutorial/releases/20190515024613/tmp/pids ]
+ DEBUG [a3bc2ca5] Finished in 0.705 seconds with exit status 1 (failed).
+ DEBUG [737f4630] Running [ -d /home/deploy/apps/rails-tutorial/releases/20190515024613/tmp/pids ] as deploy@18.222.233.192
+ DEBUG [737f4630] Command: [ -d /home/deploy/apps/rails-tutorial/releases/20190515024613/tmp/pids ]
+ DEBUG [44c7c6bf] Finished in 0.708 seconds with exit status 1 (failed).
+  INFO [b0a1f184] Running /usr/bin/env ln -s /home/deploy/apps/rails-tutorial/shared/tmp/pids /home/deploy/apps/rails-tutorial/releases/20190515024613/tmp/pids as deploy@18.222.233.192
+ DEBUG [b0a1f184] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env ln -s /home/deploy/apps/rails-tutorial/shared/tmp/pids /home/deploy/apps/rails-tutorial/releases/20190515024613/tmp/pids )
+  INFO [f489d83e] Finished in 0.709 seconds with exit status 0 (successful).
+ DEBUG [c79b9f01] Running [ -L /home/deploy/apps/rails-tutorial/releases/20190515024613/tmp/cache ] as deploy@18.222.233.192
+ DEBUG [c79b9f01] Command: [ -L /home/deploy/apps/rails-tutorial/releases/20190515024613/tmp/cache ]
+ DEBUG [382f2672] Finished in 0.707 seconds with exit status 1 (failed).
+ DEBUG [a3907643] Running [ -d /home/deploy/apps/rails-tutorial/releases/20190515024613/tmp/cache ] as deploy@18.222.233.192
+ DEBUG [a3907643] Command: [ -d /home/deploy/apps/rails-tutorial/releases/20190515024613/tmp/cache ]
+ DEBUG [05ed93b1] Finished in 0.706 seconds with exit status 1 (failed).
+  INFO [01c86cc0] Running /usr/bin/env ln -s /home/deploy/apps/rails-tutorial/shared/tmp/cache /home/deploy/apps/rails-tutorial/releases/20190515024613/tmp/cache as deploy@18.222.233.192
+ DEBUG [01c86cc0] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env ln -s /home/deploy/apps/rails-tutorial/shared/tmp/cache /home/deploy/apps/rails-tutorial/releases/20190515024613/tmp/cache )
+  INFO [069ed288] Finished in 0.708 seconds with exit status 0 (successful).
+ DEBUG [f3bc7d13] Running [ -L /home/deploy/apps/rails-tutorial/releases/20190515024613/tmp/sockets ] as deploy@18.222.233.192
+ DEBUG [f3bc7d13] Command: [ -L /home/deploy/apps/rails-tutorial/releases/20190515024613/tmp/sockets ]
+ DEBUG [17be7527] Finished in 0.706 seconds with exit status 1 (failed).
+ DEBUG [c86c9818] Running [ -d /home/deploy/apps/rails-tutorial/releases/20190515024613/tmp/sockets ] as deploy@18.222.233.192
+ DEBUG [c86c9818] Command: [ -d /home/deploy/apps/rails-tutorial/releases/20190515024613/tmp/sockets ]
+ DEBUG [15a7931b] Finished in 0.707 seconds with exit status 1 (failed).
+  INFO [8adaf509] Running /usr/bin/env ln -s /home/deploy/apps/rails-tutorial/shared/tmp/sockets /home/deploy/apps/rails-tutorial/releases/20190515024613/tmp/sockets as deploy@18.222.233.192
+ DEBUG [8adaf509] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env ln -s /home/deploy/apps/rails-tutorial/shared/tmp/sockets /home/deploy/apps/rails-tutorial/releases/20190515024613/tmp/sockets )
+  INFO [1b20e9d7] Finished in 0.709 seconds with exit status 0 (successful).
+ DEBUG [b88fa2d2] Running [ -L /home/deploy/apps/rails-tutorial/releases/20190515024613/vendor/bundle ] as deploy@18.222.233.192
+ DEBUG [b88fa2d2] Command: [ -L /home/deploy/apps/rails-tutorial/releases/20190515024613/vendor/bundle ]
+ DEBUG [5083364c] Finished in 0.708 seconds with exit status 1 (failed).
+ DEBUG [be50de6e] Running [ -d /home/deploy/apps/rails-tutorial/releases/20190515024613/vendor/bundle ] as deploy@18.222.233.192
+ DEBUG [be50de6e] Command: [ -d /home/deploy/apps/rails-tutorial/releases/20190515024613/vendor/bundle ]
+ DEBUG [8077432a] Finished in 0.706 seconds with exit status 1 (failed).
+  INFO [72684d13] Running /usr/bin/env ln -s /home/deploy/apps/rails-tutorial/shared/vendor/bundle /home/deploy/apps/rails-tutorial/releases/20190515024613/vendor/bundle as deploy@18.222.233.192
+ DEBUG [72684d13] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env ln -s /home/deploy/apps/rails-tutorial/shared/vendor/bundle /home/deploy/apps/rails-tutorial/releases/20190515024613/vendor/bundle )
+  INFO [87bbaf72] Finished in 0.710 seconds with exit status 0 (successful).
+ DEBUG [2ee8f792] Running [ -L /home/deploy/apps/rails-tutorial/releases/20190515024613/public/system ] as deploy@18.222.233.192
+ DEBUG [2ee8f792] Command: [ -L /home/deploy/apps/rails-tutorial/releases/20190515024613/public/system ]
+ DEBUG [905d4b31] Finished in 0.709 seconds with exit status 1 (failed).
+ DEBUG [24dfac26] Running [ -d /home/deploy/apps/rails-tutorial/releases/20190515024613/public/system ] as deploy@18.222.233.192
+ DEBUG [24dfac26] Command: [ -d /home/deploy/apps/rails-tutorial/releases/20190515024613/public/system ]
+ DEBUG [102dfe58] Finished in 0.706 seconds with exit status 1 (failed).
+  INFO [ca62b971] Running /usr/bin/env ln -s /home/deploy/apps/rails-tutorial/shared/public/system /home/deploy/apps/rails-tutorial/releases/20190515024613/public/system as deploy@18.222.233.192
+ DEBUG [ca62b971] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env ln -s /home/deploy/apps/rails-tutorial/shared/public/system /home/deploy/apps/rails-tutorial/releases/20190515024613/public/system )
+  INFO [5ffe7a21] Finished in 0.708 seconds with exit status 0 (successful).
+ DEBUG [54fb7c48] Running [ -L /home/deploy/apps/rails-tutorial/releases/20190515024613/public/assets ] as deploy@18.222.233.192
+ DEBUG [54fb7c48] Command: [ -L /home/deploy/apps/rails-tutorial/releases/20190515024613/public/assets ]
+ DEBUG [56ab382b] Finished in 0.705 seconds with exit status 1 (failed).
+ DEBUG [910a1afe] Running [ -d /home/deploy/apps/rails-tutorial/releases/20190515024613/public/assets ] as deploy@18.222.233.192
+ DEBUG [910a1afe] Command: [ -d /home/deploy/apps/rails-tutorial/releases/20190515024613/public/assets ]
+ DEBUG [17f4a6e0] Finished in 0.709 seconds with exit status 1 (failed).
+  INFO [f805473c] Running /usr/bin/env ln -s /home/deploy/apps/rails-tutorial/shared/public/assets /home/deploy/apps/rails-tutorial/releases/20190515024613/public/assets as deploy@18.222.233.192
+ DEBUG [f805473c] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env ln -s /home/deploy/apps/rails-tutorial/shared/public/assets /home/deploy/apps/rails-tutorial/releases/20190515024613/public/assets )
+  INFO [d2a4ca1f] Finished in 0.708 seconds with exit status 0 (successful).
+ DEBUG [697e2e98] Running if test ! -d /home/deploy/apps/rails-tutorial/releases/20190515024613; then echo "Directory does not exist '/home/deploy/apps/rails-tutorial/releases/20190515024613'" 1>&2; false; fi as deploy@18.222.233.192
+ DEBUG [697e2e98] Command: if test ! -d /home/deploy/apps/rails-tutorial/releases/20190515024613; then echo "Directory does not exist '/home/deploy/apps/rails-tutorial/releases/20190515024613'" 1>&2; false; fi
+ DEBUG [a1c06e46] Finished in 0.705 seconds with exit status 0 (successful).
+ DEBUG [52152701] Running $HOME/.rbenv/bin/rbenv exec bundle check --path /home/deploy/apps/rails-tutorial/shared/bundle as deploy@18.222.233.192
+ DEBUG [52152701] Command: cd /home/deploy/apps/rails-tutorial/releases/20190515024613 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; $HOME/.rbenv/bin/rbenv exec bundle check --path /home/deploy/apps/rails-tutorial/shared/bundle )
+ DEBUG [6766b0f9] 	[31mhttps://github.com/octoberstorm/eslint-rails (at master@71a4029) is not yet
+ DEBUG [6766b0f9] 	
+ DEBUG [6766b0f9] 	checked out. Run `bundle install` first.[0m
+ DEBUG [6766b0f9] 	
+ DEBUG [6766b0f9] Finished in 0.977 seconds with exit status 11 (failed).
+  INFO [629d2eb7] Running $HOME/.rbenv/bin/rbenv exec bundle install --path /home/deploy/apps/rails-tutorial/shared/bundle --jobs 4 --without development test --deployment --quiet as deploy@18.222.233.192
+ DEBUG [629d2eb7] Command: cd /home/deploy/apps/rails-tutorial/releases/20190515024613 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; $HOME/.rbenv/bin/rbenv exec bundle install --path /home/deploy/apps/rails-tutorial/shared/bundle --jobs 4 --without development test --deployment --quiet )
+  INFO [73abcd46] Finished in 1.145 seconds with exit status 0 (successful).
+ DEBUG [ea3057c1] Running if test ! -d /home/deploy/apps/rails-tutorial/releases/20190515024613; then echo "Directory does not exist '/home/deploy/apps/rails-tutorial/releases/20190515024613'" 1>&2; false; fi as deploy@18.222.233.192
+ DEBUG [ea3057c1] Command: if test ! -d /home/deploy/apps/rails-tutorial/releases/20190515024613; then echo "Directory does not exist '/home/deploy/apps/rails-tutorial/releases/20190515024613'" 1>&2; false; fi
+ DEBUG [525aa685] Finished in 0.708 seconds with exit status 0 (successful).
+  INFO [6ad26515] Running $HOME/.rbenv/bin/rbenv exec bundle exec rake assets:precompile as deploy@18.222.233.192
+ DEBUG [6ad26515] Command: cd /home/deploy/apps/rails-tutorial/releases/20190515024613 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" RAILS_ENV="production" RAILS_GROUPS="" ; $HOME/.rbenv/bin/rbenv exec bundle exec rake assets:precompile )
+  INFO [d2b3e16f] Finished in 10.945 seconds with exit status 0 (successful).
+ DEBUG [7a55745a] Running if test ! -d /home/deploy/apps/rails-tutorial/releases/20190515024613; then echo "Directory does not exist '/home/deploy/apps/rails-tutorial/releases/20190515024613'" 1>&2; false; fi as deploy@18.222.233.192
+ DEBUG [7a55745a] Command: if test ! -d /home/deploy/apps/rails-tutorial/releases/20190515024613; then echo "Directory does not exist '/home/deploy/apps/rails-tutorial/releases/20190515024613'" 1>&2; false; fi
+ DEBUG [c709b958] Finished in 0.703 seconds with exit status 0 (successful).
+  INFO [0ce389da] Running /usr/bin/env mkdir -p /home/deploy/apps/rails-tutorial/releases/20190515024613/assets_manifest_backup as deploy@18.222.233.192
+ DEBUG [0ce389da] Command: cd /home/deploy/apps/rails-tutorial/releases/20190515024613 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env mkdir -p /home/deploy/apps/rails-tutorial/releases/20190515024613/assets_manifest_backup )
+  INFO [90ad9ba7] Finished in 0.708 seconds with exit status 0 (successful).
+ DEBUG [eff104e2] Running /usr/bin/env ls /home/deploy/apps/rails-tutorial/releases/20190515024613/public/assets/.sprockets-manifest* as deploy@18.222.233.192
+ DEBUG [eff104e2] Command: cd /home/deploy/apps/rails-tutorial/releases/20190515024613 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env ls /home/deploy/apps/rails-tutorial/releases/20190515024613/public/assets/.sprockets-manifest* )
+ DEBUG [68663d55] 	/home/deploy/apps/rails-tutorial/releases/20190515024613/public/assets/.sprockets-manifest-ca196378cd35eccabe1d285a5c202999.json
+ DEBUG [68663d55] 	
+ DEBUG [68663d55] Finished in 0.706 seconds with exit status 0 (successful).
+ DEBUG [005c0640] Running /usr/bin/env ls /home/deploy/apps/rails-tutorial/releases/20190515024613/public/assets/.sprockets-manifest* as deploy@18.222.233.192
+ DEBUG [005c0640] Command: cd /home/deploy/apps/rails-tutorial/releases/20190515024613 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env ls /home/deploy/apps/rails-tutorial/releases/20190515024613/public/assets/.sprockets-manifest* )
+ DEBUG [79552146] 	/home/deploy/apps/rails-tutorial/releases/20190515024613/public/assets/.sprockets-manifest-ca196378cd35eccabe1d285a5c202999.json
+ DEBUG [79552146] 	
+ DEBUG [79552146] Finished in 0.709 seconds with exit status 0 (successful).
+  INFO [8b417dcb] Running /usr/bin/env cp /home/deploy/apps/rails-tutorial/releases/20190515024613/public/assets/.sprockets-manifest-ca196378cd35eccabe1d285a5c202999.json /home/deploy/apps/rails-tutorial/releases/20190515024613/assets_manifest_backup as deploy@18.222.233.192
+ DEBUG [8b417dcb] Command: cd /home/deploy/apps/rails-tutorial/releases/20190515024613 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env cp /home/deploy/apps/rails-tutorial/releases/20190515024613/public/assets/.sprockets-manifest-ca196378cd35eccabe1d285a5c202999.json /home/deploy/apps/rails-tutorial/releases/20190515024613/assets_manifest_backup )
+  INFO [30dfe48d] Finished in 0.713 seconds with exit status 0 (successful).
+  INFO [deploy:migrate] Run `rake db:migrate`
+ DEBUG [54d2915f] Running if test ! -d /home/deploy/apps/rails-tutorial/releases/20190515024613; then echo "Directory does not exist '/home/deploy/apps/rails-tutorial/releases/20190515024613'" 1>&2; false; fi as deploy@18.222.233.192
+ DEBUG [54d2915f] Command: if test ! -d /home/deploy/apps/rails-tutorial/releases/20190515024613; then echo "Directory does not exist '/home/deploy/apps/rails-tutorial/releases/20190515024613'" 1>&2; false; fi
+ DEBUG [553c59b2] Finished in 0.702 seconds with exit status 0 (successful).
+  INFO [61815ff3] Running $HOME/.rbenv/bin/rbenv exec bundle exec rake db:migrate as deploy@18.222.233.192
+ DEBUG [61815ff3] Command: cd /home/deploy/apps/rails-tutorial/releases/20190515024613 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" RAILS_ENV="production" ; $HOME/.rbenv/bin/rbenv exec bundle exec rake db:migrate )
+ DEBUG [14ab4ef8] 	== 20180108093657 CreateUsers: migrating ======================================
+ DEBUG [14ab4ef8] 	
+ DEBUG [14ab4ef8] 	-- create_table(:users)
+ DEBUG [14ab4ef8] 	
+ DEBUG [14ab4ef8] 	   -> 0.0006s
+ DEBUG [14ab4ef8] 	
+ DEBUG [14ab4ef8] 	== 20180108093657 CreateUsers: migrated (0.0008s) =============================
+ DEBUG [14ab4ef8] 	
+ DEBUG [14ab4ef8] 	
+ DEBUG [14ab4ef8] 	== 20180108095300 AddIndexToUsersEmail: migrating =============================
+ DEBUG [14ab4ef8] 	
+ DEBUG [14ab4ef8] 	-- add_index(:users, :email, {:unique=>true})
+ DEBUG [14ab4ef8] 	
+ DEBUG [14ab4ef8] 	   -> 0.0007s
+ DEBUG [14ab4ef8] 	
+ DEBUG [14ab4ef8] 	== 20180108095300 AddIndexToUsersEmail: migrated (0.0009s) ====================
+ DEBUG [14ab4ef8] 	
+ DEBUG [14ab4ef8] 	
+ DEBUG [14ab4ef8] 	== 20180108095906 AddPasswordDigestToUsers: migrating =========================
+ DEBUG [14ab4ef8] 	
+ DEBUG [14ab4ef8] 	-- add_column(:users, :password_digest, :string)
+ DEBUG [14ab4ef8] 	
+ DEBUG [14ab4ef8] 	   -> 0.0005s
+ DEBUG [14ab4ef8] 	
+ DEBUG [14ab4ef8] 	== 20180108095906 AddPasswordDigestToUsers: migrated (0.0006s) ================
+ DEBUG [14ab4ef8] 	
+ DEBUG [14ab4ef8] 	
+ DEBUG [14ab4ef8] 	== 20180111020136 CreateSchools: migrating ====================================
+ DEBUG [14ab4ef8] 	
+ DEBUG [14ab4ef8] 	-- create_table(:schools)
+ DEBUG [14ab4ef8] 	
+ DEBUG [14ab4ef8] 	   -> 0.0006s
+ DEBUG [14ab4ef8] 	
+ DEBUG [14ab4ef8] 	== 20180111020136 CreateSchools: migrated (0.0007s) ===========================
+ DEBUG [14ab4ef8] 	
+ DEBUG [14ab4ef8] 	
+ DEBUG [14ab4ef8] 	== 20180111033111 AddSchoolIdToUsers: migrating ===============================
+ DEBUG [14ab4ef8] 	
+ DEBUG [14ab4ef8] 	-- add_column(:users, :school_id, :integer)
+ DEBUG [14ab4ef8] 	
+ DEBUG [14ab4ef8] 	   -> 0.0005s
+ DEBUG [14ab4ef8] 	
+ DEBUG [14ab4ef8] 	-- add_index(:users, :school_id)
+ DEBUG [14ab4ef8] 	
+ DEBUG [14ab4ef8] 	   -> 0.0008s
+ DEBUG [14ab4ef8] 	
+ DEBUG [14ab4ef8] 	== 20180111033111 AddSchoolIdToUsers: migrated (0.0015s) ======================
+ DEBUG [14ab4ef8] 	
+ DEBUG [14ab4ef8] 	
+ DEBUG [14ab4ef8] 	== 20180111065433 AddDoBToUsers: migrating ====================================
+ DEBUG [14ab4ef8] 	
+ DEBUG [14ab4ef8] 	-- add_column(:users, :dob, :date)
+ DEBUG [14ab4ef8] 	
+ DEBUG [14ab4ef8] 	   -> 0.0005s
+ DEBUG [14ab4ef8] 	
+ DEBUG [14ab4ef8] 	== 20180111065433 AddDoBToUsers: migrated (0.0006s) ===========================
+ DEBUG [14ab4ef8] 	
+ DEBUG [14ab4ef8] 	
+ DEBUG [14ab4ef8] 	== 20180222085755 AddRememberDigestToUsers: migrating =========================
+ DEBUG [14ab4ef8] 	
+ DEBUG [14ab4ef8] 	-- add_column(:users, :remember_digest, :string)
+ DEBUG [14ab4ef8] 	
+ DEBUG [14ab4ef8] 	   -> 0.0004s
+ DEBUG [14ab4ef8] 	
+ DEBUG [14ab4ef8] 	== 20180222085755 AddRememberDigestToUsers: migrated (0.0005s) ================
+ DEBUG [14ab4ef8] 	
+ DEBUG [14ab4ef8] 	
+ DEBUG [14ab4ef8] 	== 20180303172438 AddAdminToUsers: migrating ==================================
+ DEBUG [14ab4ef8] 	
+ DEBUG [14ab4ef8] 	-- add_column(:users, :admin, :boolean, {:default=>false})
+ DEBUG [14ab4ef8] 	
+ DEBUG [14ab4ef8] 	   -> 0.0006s
+ DEBUG [14ab4ef8] 	
+ DEBUG [14ab4ef8] 	== 20180303172438 AddAdminToUsers: migrated (0.0007s) =========================
+ DEBUG [14ab4ef8] 	
+ DEBUG [14ab4ef8] 	
+ DEBUG [14ab4ef8] 	== 20180308072410 AddActivationToUsers: migrating =============================
+ DEBUG [14ab4ef8] 	
+ DEBUG [14ab4ef8] 	-- add_column(:users, :activation_digest, :string)
+ DEBUG [14ab4ef8] 	
+ DEBUG [14ab4ef8] 	   -> 0.0005s
+ DEBUG [14ab4ef8] 	
+ DEBUG [14ab4ef8] 	-- add_column(:users, :activated, :boolean, {:default=>false})
+ DEBUG [14ab4ef8] 	
+ DEBUG [14ab4ef8] 	   -> 0.0004s
+ DEBUG [14ab4ef8] 	
+ DEBUG [14ab4ef8] 	-- add_column(:users, :activated_at, :datetime)
+ DEBUG [14ab4ef8] 	
+ DEBUG [14ab4ef8] 	   -> 0.0003s
+ DEBUG [14ab4ef8] 	
+ DEBUG [14ab4ef8] 	== 20180308072410 AddActivationToUsers: migrated (0.0015s) ====================
+ DEBUG [14ab4ef8] 	
+ DEBUG [14ab4ef8] 	
+ DEBUG [14ab4ef8] 	== 20180312063401 AddResetToUsers: migrating ==================================
+ DEBUG [14ab4ef8] 	
+ DEBUG [14ab4ef8] 	-- add_column(:users, :reset_digest, :string)
+ DEBUG [14ab4ef8] 	
+ DEBUG [14ab4ef8] 	   -> 0.0004s
+ DEBUG [14ab4ef8] 	
+ DEBUG [14ab4ef8] 	-- add_column(:users, :reset_sent_at, :datetime)
+ DEBUG [14ab4ef8] 	
+ DEBUG [14ab4ef8] 	   -> 0.0003s
+ DEBUG [14ab4ef8] 	
+ DEBUG [14ab4ef8] 	== 20180312063401 AddResetToUsers: migrated (0.0010s) =========================
+ DEBUG [14ab4ef8] 	
+ DEBUG [14ab4ef8] 	
+  INFO [14ab4ef8] Finished in 2.611 seconds with exit status 0 (successful).
+  INFO [519e0fb9] Running /usr/bin/env ln -s /home/deploy/apps/rails-tutorial/releases/20190515024613 /home/deploy/apps/rails-tutorial/releases/current as deploy@18.222.233.192
+ DEBUG [519e0fb9] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env ln -s /home/deploy/apps/rails-tutorial/releases/20190515024613 /home/deploy/apps/rails-tutorial/releases/current )
+  INFO [62922ab7] Finished in 0.712 seconds with exit status 0 (successful).
+  INFO [89ec79bf] Running /usr/bin/env mv /home/deploy/apps/rails-tutorial/releases/current /home/deploy/apps/rails-tutorial as deploy@18.222.233.192
+ DEBUG [89ec79bf] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env mv /home/deploy/apps/rails-tutorial/releases/current /home/deploy/apps/rails-tutorial )
+  INFO [fd4051f3] Finished in 0.707 seconds with exit status 0 (successful).
+ DEBUG [e0fca390] Running /usr/bin/env ls -x /home/deploy/apps/rails-tutorial/releases as deploy@18.222.233.192
+ DEBUG [e0fca390] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env ls -x /home/deploy/apps/rails-tutorial/releases )
+ DEBUG [b973e3ee] 	20190515021746
+ DEBUG [b973e3ee] 		
+ DEBUG [b973e3ee] 	20190515024613
+ DEBUG [b973e3ee] 	
+ DEBUG [b973e3ee] Finished in 0.709 seconds with exit status 0 (successful).
+ DEBUG [db65af55] Running if test ! -d /home/deploy/apps/rails-tutorial/current; then echo "Directory does not exist '/home/deploy/apps/rails-tutorial/current'" 1>&2; false; fi as deploy@18.222.233.192
+ DEBUG [db65af55] Command: if test ! -d /home/deploy/apps/rails-tutorial/current; then echo "Directory does not exist '/home/deploy/apps/rails-tutorial/current'" 1>&2; false; fi
+ DEBUG [52e71cb0] Finished in 0.708 seconds with exit status 0 (successful).
+ DEBUG [25a476ef] Running [ -f /home/deploy/apps/rails-tutorial/shared/tmp/pids/puma.pid ] as deploy@18.222.233.192
+ DEBUG [25a476ef] Command: [ -f /home/deploy/apps/rails-tutorial/shared/tmp/pids/puma.pid ]
+ DEBUG [bfc6a1ee] Finished in 0.709 seconds with exit status 1 (failed).
+  INFO [4c1eac60] Running mkdir /home/deploy/apps/rails-tutorial/shared/tmp/sockets -p as deploy@18.222.233.192
+ DEBUG [4c1eac60] Command: mkdir /home/deploy/apps/rails-tutorial/shared/tmp/sockets -p
+  INFO [ba8ae58d] Finished in 0.706 seconds with exit status 0 (successful).
+  INFO [da5d8146] Running mkdir /home/deploy/apps/rails-tutorial/shared/tmp/pids -p as deploy@18.222.233.192
+ DEBUG [da5d8146] Command: mkdir /home/deploy/apps/rails-tutorial/shared/tmp/pids -p
+  INFO [7de5879c] Finished in 0.708 seconds with exit status 0 (successful).
+ DEBUG [03857ecb] Running [ -f /home/deploy/apps/rails-tutorial/shared/puma.rb ] as deploy@18.222.233.192
+ DEBUG [03857ecb] Command: [ -f /home/deploy/apps/rails-tutorial/shared/puma.rb ]
+ DEBUG [b1db6022] Finished in 0.704 seconds with exit status 0 (successful).
+  INFO using conf file /home/deploy/apps/rails-tutorial/shared/puma.rb
+ DEBUG [c60dd0dc] Running [ -f /home/deploy/apps/rails-tutorial/shared/tmp/pids/puma.pid ] as deploy@18.222.233.192
+ DEBUG [c60dd0dc] Command: [ -f /home/deploy/apps/rails-tutorial/shared/tmp/pids/puma.pid ]
+ DEBUG [97a66b27] Finished in 0.710 seconds with exit status 1 (failed).
+ DEBUG [8d32e7fc] Running if test ! -d /home/deploy/apps/rails-tutorial/current; then echo "Directory does not exist '/home/deploy/apps/rails-tutorial/current'" 1>&2; false; fi as deploy@18.222.233.192
+ DEBUG [8d32e7fc] Command: if test ! -d /home/deploy/apps/rails-tutorial/current; then echo "Directory does not exist '/home/deploy/apps/rails-tutorial/current'" 1>&2; false; fi
+ DEBUG [258a6965] Finished in 0.707 seconds with exit status 0 (successful).
+  INFO [a97993a6] Running $HOME/.rbenv/bin/rbenv exec bundle exec puma -C /home/deploy/apps/rails-tutorial/shared/puma.rb --daemon as deploy@18.222.233.192
+ DEBUG [a97993a6] Command: cd /home/deploy/apps/rails-tutorial/current && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" RACK_ENV="production" ; $HOME/.rbenv/bin/rbenv exec bundle exec puma -C /home/deploy/apps/rails-tutorial/shared/puma.rb --daemon )
+ DEBUG [741b0ae5] 	Puma starting in single mode...
+ DEBUG [741b0ae5] 	
+ DEBUG [741b0ae5] 	* Version 3.11.0 (ruby 2.5.1-p57), codename: Love Song
+ DEBUG [741b0ae5] 	
+ DEBUG [741b0ae5] 	* Min threads: 4, max threads: 16
+ DEBUG [741b0ae5] 	
+ DEBUG [741b0ae5] 	* Environment: production
+ DEBUG [741b0ae5] 	
+ DEBUG [741b0ae5] 	* Daemonizing...
+ DEBUG [741b0ae5] 	
+  INFO [741b0ae5] Finished in 1.068 seconds with exit status 0 (successful).
+ DEBUG [95477393] Running if test ! -d /home/deploy/apps/rails-tutorial/releases; then echo "Directory does not exist '/home/deploy/apps/rails-tutorial/releases'" 1>&2; false; fi as deploy@18.222.233.192
+ DEBUG [95477393] Command: if test ! -d /home/deploy/apps/rails-tutorial/releases; then echo "Directory does not exist '/home/deploy/apps/rails-tutorial/releases'" 1>&2; false; fi
+ DEBUG [dab4a7ca] Finished in 0.712 seconds with exit status 0 (successful).
+  INFO [de0538a3] Running /usr/bin/env echo "Branch master (at 38f4ec23bd9d8b821a1edfea8640cee79c7e317e) deployed as release 20190515024613 by FRAMGIA\nguyen.t.h.lanh" >> /home/deploy/apps/rails-tutorial/revisions.log as deploy@18.222.233.192
+ DEBUG [de0538a3] Command: cd /home/deploy/apps/rails-tutorial/releases && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env echo "Branch master (at 38f4ec23bd9d8b821a1edfea8640cee79c7e317e) deployed as release 20190515024613 by FRAMGIA\nguyen.t.h.lanh" >> /home/deploy/apps/rails-tutorial/revisions.log )
+  INFO [8a2992e2] Finished in 0.718 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2019-05-15 09:54:35 +0700 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO rbenv: rbenv_ruby is not set; ruby version will be defined by the remote hosts via rbenv
+  INFO [7f965098] Running /usr/bin/env mkdir -p /tmp as deploy@18.222.233.192
+ DEBUG [7f965098] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env mkdir -p /tmp )
+  INFO [0707214c] Finished in 3.074 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-rails-tutorial-production-FRAMGIA\nguyen.t.h.lanh.sh 0.0%
+  INFO Uploading /tmp/git-ssh-rails-tutorial-production-FRAMGIA\nguyen.t.h.lanh.sh 100.0%
+  INFO [62e1f3fa] Running /usr/bin/env chmod 700 /tmp/git-ssh-rails-tutorial-production-FRAMGIA\\nguyen.t.h.lanh.sh as deploy@18.222.233.192
+ DEBUG [62e1f3fa] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env chmod 700 /tmp/git-ssh-rails-tutorial-production-FRAMGIA\\nguyen.t.h.lanh.sh )
+  INFO [c19a3308] Finished in 0.710 seconds with exit status 0 (successful).
+  INFO [b142aec9] Running /usr/bin/env git ls-remote git@github.com:lanhlanh/rails-tutorial.git HEAD as deploy@18.222.233.192
+ DEBUG [b142aec9] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-rails-tutorial-production-FRAMGIA\nguyen.t.h.lanh.sh" ; /usr/bin/env git ls-remote git@github.com:lanhlanh/rails-tutorial.git HEAD )
+ DEBUG [ab377a3e] 	38f4ec23bd9d8b821a1edfea8640cee79c7e317e
+ DEBUG [ab377a3e] 		HEAD
+  INFO [ab377a3e] Finished in 1.695 seconds with exit status 0 (successful).
+  INFO [8e21595d] Running /usr/bin/env mkdir -p /home/deploy/apps/rails-tutorial/shared /home/deploy/apps/rails-tutorial/releases as deploy@18.222.233.192
+ DEBUG [8e21595d] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env mkdir -p /home/deploy/apps/rails-tutorial/shared /home/deploy/apps/rails-tutorial/releases )
+  INFO [533bd5d7] Finished in 0.663 seconds with exit status 0 (successful).
+  INFO [6514e02e] Running /usr/bin/env mkdir -p /home/deploy/apps/rails-tutorial/shared/bin /home/deploy/apps/rails-tutorial/shared/log /home/deploy/apps/rails-tutorial/shared/tmp/pids /home/deploy/apps/rails-tutorial/shared/tmp/cache /home/deploy/apps/rails-tutorial/shared/tmp/sockets /home/deploy/apps/rails-tutorial/shared/vendor/bundle /home/deploy/apps/rails-tutorial/shared/public/system /home/deploy/apps/rails-tutorial/shared/public/assets as deploy@18.222.233.192
+ DEBUG [6514e02e] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env mkdir -p /home/deploy/apps/rails-tutorial/shared/bin /home/deploy/apps/rails-tutorial/shared/log /home/deploy/apps/rails-tutorial/shared/tmp/pids /home/deploy/apps/rails-tutorial/shared/tmp/cache /home/deploy/apps/rails-tutorial/shared/tmp/sockets /home/deploy/apps/rails-tutorial/shared/vendor/bundle /home/deploy/apps/rails-tutorial/shared/public/system /home/deploy/apps/rails-tutorial/shared/public/assets )
+  INFO [e9d5c9b2] Finished in 0.702 seconds with exit status 0 (successful).
+  INFO [94cc67dc] Running /usr/bin/env mkdir -p /home/deploy/apps/rails-tutorial/shared/config as deploy@18.222.233.192
+ DEBUG [94cc67dc] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env mkdir -p /home/deploy/apps/rails-tutorial/shared/config )
+  INFO [051c7fb5] Finished in 0.705 seconds with exit status 0 (successful).
+ DEBUG [5b5e1756] Running [ -f /home/deploy/apps/rails-tutorial/shared/config/database.yml ] as deploy@18.222.233.192
+ DEBUG [5b5e1756] Command: [ -f /home/deploy/apps/rails-tutorial/shared/config/database.yml ]
+ DEBUG [3db658c6] Finished in 0.703 seconds with exit status 0 (successful).
+ DEBUG [9d701bcf] Running [ -f /home/deploy/apps/rails-tutorial/shared/puma.rb ] as deploy@18.222.233.192
+ DEBUG [9d701bcf] Command: [ -f /home/deploy/apps/rails-tutorial/shared/puma.rb ]
+ DEBUG [af5ffd51] Finished in 0.704 seconds with exit status 0 (successful).
+ DEBUG [b77eba0a] Running [ -f /home/deploy/apps/rails-tutorial/current/REVISION ] as deploy@18.222.233.192
+ DEBUG [b77eba0a] Command: [ -f /home/deploy/apps/rails-tutorial/current/REVISION ]
+ DEBUG [7d9e4dd9] Finished in 0.704 seconds with exit status 0 (successful).
+ DEBUG [e1a7b747] Running /usr/bin/env cat /home/deploy/apps/rails-tutorial/current/REVISION 2>/dev/null as deploy@18.222.233.192
+ DEBUG [e1a7b747] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env cat /home/deploy/apps/rails-tutorial/current/REVISION 2>/dev/null )
+ DEBUG [fbe28580] 	38f4ec23bd9d8b821a1edfea8640cee79c7e317e
+ DEBUG [fbe28580] 	
+ DEBUG [fbe28580] Finished in 0.713 seconds with exit status 0 (successful).
+ DEBUG [82e8bfa3] Running [ -f /home/deploy/apps/rails-tutorial/repo/HEAD ] as deploy@18.222.233.192
+ DEBUG [82e8bfa3] Command: [ -f /home/deploy/apps/rails-tutorial/repo/HEAD ]
+ DEBUG [891f8043] Finished in 0.711 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/deploy/apps/rails-tutorial/repo
+ DEBUG [1dee3c7b] Running if test ! -d /home/deploy/apps/rails-tutorial/repo; then echo "Directory does not exist '/home/deploy/apps/rails-tutorial/repo'" 1>&2; false; fi as deploy@18.222.233.192
+ DEBUG [1dee3c7b] Command: if test ! -d /home/deploy/apps/rails-tutorial/repo; then echo "Directory does not exist '/home/deploy/apps/rails-tutorial/repo'" 1>&2; false; fi
+ DEBUG [50278ace] Finished in 0.705 seconds with exit status 0 (successful).
+  INFO [bd2d889d] Running /usr/bin/env git remote set-url origin git@github.com:lanhlanh/rails-tutorial.git as deploy@18.222.233.192
+ DEBUG [bd2d889d] Command: cd /home/deploy/apps/rails-tutorial/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-rails-tutorial-production-FRAMGIA\nguyen.t.h.lanh.sh" ; /usr/bin/env git remote set-url origin git@github.com:lanhlanh/rails-tutorial.git )
+  INFO [38bb8316] Finished in 0.708 seconds with exit status 0 (successful).
+  INFO [6fb838fa] Running /usr/bin/env git remote update --prune as deploy@18.222.233.192
+ DEBUG [6fb838fa] Command: cd /home/deploy/apps/rails-tutorial/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-rails-tutorial-production-FRAMGIA\nguyen.t.h.lanh.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [ab2764e1] 	Fetching origin
+ DEBUG [ab2764e1] 	
+  INFO [ab2764e1] Finished in 1.734 seconds with exit status 0 (successful).
+ DEBUG [38cfdd96] Running if test ! -d /home/deploy/apps/rails-tutorial/repo; then echo "Directory does not exist '/home/deploy/apps/rails-tutorial/repo'" 1>&2; false; fi as deploy@18.222.233.192
+ DEBUG [38cfdd96] Command: if test ! -d /home/deploy/apps/rails-tutorial/repo; then echo "Directory does not exist '/home/deploy/apps/rails-tutorial/repo'" 1>&2; false; fi
+ DEBUG [15bc7b8e] Finished in 0.661 seconds with exit status 0 (successful).
+  INFO [339fa1ad] Running /usr/bin/env mkdir -p /home/deploy/apps/rails-tutorial/releases/20190515025447 as deploy@18.222.233.192
+ DEBUG [339fa1ad] Command: cd /home/deploy/apps/rails-tutorial/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-rails-tutorial-production-FRAMGIA\nguyen.t.h.lanh.sh" ; /usr/bin/env mkdir -p /home/deploy/apps/rails-tutorial/releases/20190515025447 )
+  INFO [f1aa3f05] Finished in 0.710 seconds with exit status 0 (successful).
+  INFO [eb7e8dcc] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/deploy/apps/rails-tutorial/releases/20190515025447 as deploy@18.222.233.192
+ DEBUG [eb7e8dcc] Command: cd /home/deploy/apps/rails-tutorial/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-rails-tutorial-production-FRAMGIA\nguyen.t.h.lanh.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/deploy/apps/rails-tutorial/releases/20190515025447 )
+  INFO [b386ef68] Finished in 0.717 seconds with exit status 0 (successful).
+ DEBUG [1b957364] Running if test ! -d /home/deploy/apps/rails-tutorial/repo; then echo "Directory does not exist '/home/deploy/apps/rails-tutorial/repo'" 1>&2; false; fi as deploy@18.222.233.192
+ DEBUG [1b957364] Command: if test ! -d /home/deploy/apps/rails-tutorial/repo; then echo "Directory does not exist '/home/deploy/apps/rails-tutorial/repo'" 1>&2; false; fi
+ DEBUG [316ed6c0] Finished in 0.707 seconds with exit status 0 (successful).
+ DEBUG [b2a09090] Running /usr/bin/env git rev-list --max-count=1 master as deploy@18.222.233.192
+ DEBUG [b2a09090] Command: cd /home/deploy/apps/rails-tutorial/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-rails-tutorial-production-FRAMGIA\nguyen.t.h.lanh.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [442b6921] 	38f4ec23bd9d8b821a1edfea8640cee79c7e317e
+ DEBUG [442b6921] 	
+ DEBUG [442b6921] Finished in 0.716 seconds with exit status 0 (successful).
+ DEBUG [b2cd2f87] Running if test ! -d /home/deploy/apps/rails-tutorial/releases/20190515025447; then echo "Directory does not exist '/home/deploy/apps/rails-tutorial/releases/20190515025447'" 1>&2; false; fi as deploy@18.222.233.192
+ DEBUG [b2cd2f87] Command: if test ! -d /home/deploy/apps/rails-tutorial/releases/20190515025447; then echo "Directory does not exist '/home/deploy/apps/rails-tutorial/releases/20190515025447'" 1>&2; false; fi
+ DEBUG [f89d3354] Finished in 0.707 seconds with exit status 0 (successful).
+  INFO [32841914] Running /usr/bin/env echo "38f4ec23bd9d8b821a1edfea8640cee79c7e317e" > REVISION as deploy@18.222.233.192
+ DEBUG [32841914] Command: cd /home/deploy/apps/rails-tutorial/releases/20190515025447 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env echo "38f4ec23bd9d8b821a1edfea8640cee79c7e317e" > REVISION )
+  INFO [5b8d82cb] Finished in 0.708 seconds with exit status 0 (successful).
+  INFO [9297f259] Running /usr/bin/env mkdir -p /home/deploy/apps/rails-tutorial/releases/20190515025447/config as deploy@18.222.233.192
+ DEBUG [9297f259] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env mkdir -p /home/deploy/apps/rails-tutorial/releases/20190515025447/config )
+  INFO [38e0b40c] Finished in 0.707 seconds with exit status 0 (successful).
+ DEBUG [54c8fc88] Running [ -L /home/deploy/apps/rails-tutorial/releases/20190515025447/config/database.yml ] as deploy@18.222.233.192
+ DEBUG [54c8fc88] Command: [ -L /home/deploy/apps/rails-tutorial/releases/20190515025447/config/database.yml ]
+ DEBUG [5b39af11] Finished in 0.705 seconds with exit status 1 (failed).
+ DEBUG [c227a748] Running [ -f /home/deploy/apps/rails-tutorial/releases/20190515025447/config/database.yml ] as deploy@18.222.233.192
+ DEBUG [c227a748] Command: [ -f /home/deploy/apps/rails-tutorial/releases/20190515025447/config/database.yml ]
+ DEBUG [ae49f97d] Finished in 0.707 seconds with exit status 1 (failed).
+  INFO [6b20f738] Running /usr/bin/env ln -s /home/deploy/apps/rails-tutorial/shared/config/database.yml /home/deploy/apps/rails-tutorial/releases/20190515025447/config/database.yml as deploy@18.222.233.192
+ DEBUG [6b20f738] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env ln -s /home/deploy/apps/rails-tutorial/shared/config/database.yml /home/deploy/apps/rails-tutorial/releases/20190515025447/config/database.yml )
+  INFO [2a7181a3] Finished in 0.711 seconds with exit status 0 (successful).
+  INFO [b82eda12] Running /usr/bin/env mkdir -p /home/deploy/apps/rails-tutorial/releases/20190515025447 /home/deploy/apps/rails-tutorial/releases/20190515025447/tmp /home/deploy/apps/rails-tutorial/releases/20190515025447/vendor /home/deploy/apps/rails-tutorial/releases/20190515025447/public as deploy@18.222.233.192
+ DEBUG [b82eda12] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env mkdir -p /home/deploy/apps/rails-tutorial/releases/20190515025447 /home/deploy/apps/rails-tutorial/releases/20190515025447/tmp /home/deploy/apps/rails-tutorial/releases/20190515025447/vendor /home/deploy/apps/rails-tutorial/releases/20190515025447/public )
+  INFO [152d3e3d] Finished in 0.707 seconds with exit status 0 (successful).
+ DEBUG [0e271052] Running [ -L /home/deploy/apps/rails-tutorial/releases/20190515025447/bin ] as deploy@18.222.233.192
+ DEBUG [0e271052] Command: [ -L /home/deploy/apps/rails-tutorial/releases/20190515025447/bin ]
+ DEBUG [b8a27786] Finished in 0.705 seconds with exit status 1 (failed).
+ DEBUG [30cfb18d] Running [ -d /home/deploy/apps/rails-tutorial/releases/20190515025447/bin ] as deploy@18.222.233.192
+ DEBUG [30cfb18d] Command: [ -d /home/deploy/apps/rails-tutorial/releases/20190515025447/bin ]
+ DEBUG [7f14f17f] Finished in 0.707 seconds with exit status 0 (successful).
+  INFO [22266247] Running /usr/bin/env rm -rf /home/deploy/apps/rails-tutorial/releases/20190515025447/bin as deploy@18.222.233.192
+ DEBUG [22266247] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env rm -rf /home/deploy/apps/rails-tutorial/releases/20190515025447/bin )
+  INFO [cb736d24] Finished in 0.709 seconds with exit status 0 (successful).
+  INFO [cd0d6977] Running /usr/bin/env ln -s /home/deploy/apps/rails-tutorial/shared/bin /home/deploy/apps/rails-tutorial/releases/20190515025447/bin as deploy@18.222.233.192
+ DEBUG [cd0d6977] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env ln -s /home/deploy/apps/rails-tutorial/shared/bin /home/deploy/apps/rails-tutorial/releases/20190515025447/bin )
+  INFO [e06973d8] Finished in 0.708 seconds with exit status 0 (successful).
+ DEBUG [5a096c3b] Running [ -L /home/deploy/apps/rails-tutorial/releases/20190515025447/log ] as deploy@18.222.233.192
+ DEBUG [5a096c3b] Command: [ -L /home/deploy/apps/rails-tutorial/releases/20190515025447/log ]
+ DEBUG [556ca51e] Finished in 0.705 seconds with exit status 1 (failed).
+ DEBUG [e85070a9] Running [ -d /home/deploy/apps/rails-tutorial/releases/20190515025447/log ] as deploy@18.222.233.192
+ DEBUG [e85070a9] Command: [ -d /home/deploy/apps/rails-tutorial/releases/20190515025447/log ]
+ DEBUG [7ad898bd] Finished in 0.707 seconds with exit status 0 (successful).
+  INFO [c417be03] Running /usr/bin/env rm -rf /home/deploy/apps/rails-tutorial/releases/20190515025447/log as deploy@18.222.233.192
+ DEBUG [c417be03] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env rm -rf /home/deploy/apps/rails-tutorial/releases/20190515025447/log )
+  INFO [dc25ded5] Finished in 0.710 seconds with exit status 0 (successful).
+  INFO [23364636] Running /usr/bin/env ln -s /home/deploy/apps/rails-tutorial/shared/log /home/deploy/apps/rails-tutorial/releases/20190515025447/log as deploy@18.222.233.192
+ DEBUG [23364636] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env ln -s /home/deploy/apps/rails-tutorial/shared/log /home/deploy/apps/rails-tutorial/releases/20190515025447/log )
+  INFO [2b09f2e4] Finished in 0.707 seconds with exit status 0 (successful).
+ DEBUG [b6465818] Running [ -L /home/deploy/apps/rails-tutorial/releases/20190515025447/tmp/pids ] as deploy@18.222.233.192
+ DEBUG [b6465818] Command: [ -L /home/deploy/apps/rails-tutorial/releases/20190515025447/tmp/pids ]
+ DEBUG [e47b5684] Finished in 0.705 seconds with exit status 1 (failed).
+ DEBUG [24d86a5b] Running [ -d /home/deploy/apps/rails-tutorial/releases/20190515025447/tmp/pids ] as deploy@18.222.233.192
+ DEBUG [24d86a5b] Command: [ -d /home/deploy/apps/rails-tutorial/releases/20190515025447/tmp/pids ]
+ DEBUG [b71123a2] Finished in 0.707 seconds with exit status 1 (failed).
+  INFO [a7dbf852] Running /usr/bin/env ln -s /home/deploy/apps/rails-tutorial/shared/tmp/pids /home/deploy/apps/rails-tutorial/releases/20190515025447/tmp/pids as deploy@18.222.233.192
+ DEBUG [a7dbf852] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env ln -s /home/deploy/apps/rails-tutorial/shared/tmp/pids /home/deploy/apps/rails-tutorial/releases/20190515025447/tmp/pids )
+  INFO [4b03d6d9] Finished in 0.709 seconds with exit status 0 (successful).
+ DEBUG [cb5d98f3] Running [ -L /home/deploy/apps/rails-tutorial/releases/20190515025447/tmp/cache ] as deploy@18.222.233.192
+ DEBUG [cb5d98f3] Command: [ -L /home/deploy/apps/rails-tutorial/releases/20190515025447/tmp/cache ]
+ DEBUG [ae48f265] Finished in 0.707 seconds with exit status 1 (failed).
+ DEBUG [603d8e22] Running [ -d /home/deploy/apps/rails-tutorial/releases/20190515025447/tmp/cache ] as deploy@18.222.233.192
+ DEBUG [603d8e22] Command: [ -d /home/deploy/apps/rails-tutorial/releases/20190515025447/tmp/cache ]
+ DEBUG [0cc8221b] Finished in 0.706 seconds with exit status 1 (failed).
+  INFO [6708f561] Running /usr/bin/env ln -s /home/deploy/apps/rails-tutorial/shared/tmp/cache /home/deploy/apps/rails-tutorial/releases/20190515025447/tmp/cache as deploy@18.222.233.192
+ DEBUG [6708f561] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env ln -s /home/deploy/apps/rails-tutorial/shared/tmp/cache /home/deploy/apps/rails-tutorial/releases/20190515025447/tmp/cache )
+  INFO [60bef6ea] Finished in 0.708 seconds with exit status 0 (successful).
+ DEBUG [4da46e0a] Running [ -L /home/deploy/apps/rails-tutorial/releases/20190515025447/tmp/sockets ] as deploy@18.222.233.192
+ DEBUG [4da46e0a] Command: [ -L /home/deploy/apps/rails-tutorial/releases/20190515025447/tmp/sockets ]
+ DEBUG [b9f61602] Finished in 0.706 seconds with exit status 1 (failed).
+ DEBUG [ecba4876] Running [ -d /home/deploy/apps/rails-tutorial/releases/20190515025447/tmp/sockets ] as deploy@18.222.233.192
+ DEBUG [ecba4876] Command: [ -d /home/deploy/apps/rails-tutorial/releases/20190515025447/tmp/sockets ]
+ DEBUG [4218e3d8] Finished in 0.709 seconds with exit status 1 (failed).
+  INFO [d00cdaf1] Running /usr/bin/env ln -s /home/deploy/apps/rails-tutorial/shared/tmp/sockets /home/deploy/apps/rails-tutorial/releases/20190515025447/tmp/sockets as deploy@18.222.233.192
+ DEBUG [d00cdaf1] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env ln -s /home/deploy/apps/rails-tutorial/shared/tmp/sockets /home/deploy/apps/rails-tutorial/releases/20190515025447/tmp/sockets )
+  INFO [b80d9bc7] Finished in 0.710 seconds with exit status 0 (successful).
+ DEBUG [e958e68c] Running [ -L /home/deploy/apps/rails-tutorial/releases/20190515025447/vendor/bundle ] as deploy@18.222.233.192
+ DEBUG [e958e68c] Command: [ -L /home/deploy/apps/rails-tutorial/releases/20190515025447/vendor/bundle ]
+ DEBUG [e89203c2] Finished in 0.707 seconds with exit status 1 (failed).
+ DEBUG [20a62be7] Running [ -d /home/deploy/apps/rails-tutorial/releases/20190515025447/vendor/bundle ] as deploy@18.222.233.192
+ DEBUG [20a62be7] Command: [ -d /home/deploy/apps/rails-tutorial/releases/20190515025447/vendor/bundle ]
+ DEBUG [003e1f88] Finished in 0.708 seconds with exit status 1 (failed).
+  INFO [d67e09d5] Running /usr/bin/env ln -s /home/deploy/apps/rails-tutorial/shared/vendor/bundle /home/deploy/apps/rails-tutorial/releases/20190515025447/vendor/bundle as deploy@18.222.233.192
+ DEBUG [d67e09d5] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env ln -s /home/deploy/apps/rails-tutorial/shared/vendor/bundle /home/deploy/apps/rails-tutorial/releases/20190515025447/vendor/bundle )
+  INFO [bc700d91] Finished in 0.708 seconds with exit status 0 (successful).
+ DEBUG [a431b341] Running [ -L /home/deploy/apps/rails-tutorial/releases/20190515025447/public/system ] as deploy@18.222.233.192
+ DEBUG [a431b341] Command: [ -L /home/deploy/apps/rails-tutorial/releases/20190515025447/public/system ]
+ DEBUG [ee7aaa0d] Finished in 0.706 seconds with exit status 1 (failed).
+ DEBUG [5819a798] Running [ -d /home/deploy/apps/rails-tutorial/releases/20190515025447/public/system ] as deploy@18.222.233.192
+ DEBUG [5819a798] Command: [ -d /home/deploy/apps/rails-tutorial/releases/20190515025447/public/system ]
+ DEBUG [cb40752b] Finished in 0.707 seconds with exit status 1 (failed).
+  INFO [589adcaa] Running /usr/bin/env ln -s /home/deploy/apps/rails-tutorial/shared/public/system /home/deploy/apps/rails-tutorial/releases/20190515025447/public/system as deploy@18.222.233.192
+ DEBUG [589adcaa] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env ln -s /home/deploy/apps/rails-tutorial/shared/public/system /home/deploy/apps/rails-tutorial/releases/20190515025447/public/system )
+  INFO [7d7eb70d] Finished in 0.709 seconds with exit status 0 (successful).
+ DEBUG [eeef3a20] Running [ -L /home/deploy/apps/rails-tutorial/releases/20190515025447/public/assets ] as deploy@18.222.233.192
+ DEBUG [eeef3a20] Command: [ -L /home/deploy/apps/rails-tutorial/releases/20190515025447/public/assets ]
+ DEBUG [ff49f5d9] Finished in 0.705 seconds with exit status 1 (failed).
+ DEBUG [c9f412b2] Running [ -d /home/deploy/apps/rails-tutorial/releases/20190515025447/public/assets ] as deploy@18.222.233.192
+ DEBUG [c9f412b2] Command: [ -d /home/deploy/apps/rails-tutorial/releases/20190515025447/public/assets ]
+ DEBUG [868958af] Finished in 0.704 seconds with exit status 1 (failed).
+  INFO [e2c0818e] Running /usr/bin/env ln -s /home/deploy/apps/rails-tutorial/shared/public/assets /home/deploy/apps/rails-tutorial/releases/20190515025447/public/assets as deploy@18.222.233.192
+ DEBUG [e2c0818e] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env ln -s /home/deploy/apps/rails-tutorial/shared/public/assets /home/deploy/apps/rails-tutorial/releases/20190515025447/public/assets )
+  INFO [d89118ef] Finished in 0.707 seconds with exit status 0 (successful).
+ DEBUG [21c13612] Running if test ! -d /home/deploy/apps/rails-tutorial/releases/20190515025447; then echo "Directory does not exist '/home/deploy/apps/rails-tutorial/releases/20190515025447'" 1>&2; false; fi as deploy@18.222.233.192
+ DEBUG [21c13612] Command: if test ! -d /home/deploy/apps/rails-tutorial/releases/20190515025447; then echo "Directory does not exist '/home/deploy/apps/rails-tutorial/releases/20190515025447'" 1>&2; false; fi
+ DEBUG [59fc514b] Finished in 0.704 seconds with exit status 0 (successful).
+ DEBUG [88be71d7] Running $HOME/.rbenv/bin/rbenv exec bundle check --path /home/deploy/apps/rails-tutorial/shared/bundle as deploy@18.222.233.192
+ DEBUG [88be71d7] Command: cd /home/deploy/apps/rails-tutorial/releases/20190515025447 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; $HOME/.rbenv/bin/rbenv exec bundle check --path /home/deploy/apps/rails-tutorial/shared/bundle )
+ DEBUG [2dd7a90f] 	[31mhttps://github.com/octoberstorm/eslint-rails (at master@71a4029) is not yet
+ DEBUG [2dd7a90f] 	
+ DEBUG [2dd7a90f] 	checked out. Run `bundle install` first.[0m
+ DEBUG [2dd7a90f] 	
+ DEBUG [2dd7a90f] Finished in 0.972 seconds with exit status 11 (failed).
+  INFO [2daada06] Running $HOME/.rbenv/bin/rbenv exec bundle install --path /home/deploy/apps/rails-tutorial/shared/bundle --jobs 4 --without development test --deployment --quiet as deploy@18.222.233.192
+ DEBUG [2daada06] Command: cd /home/deploy/apps/rails-tutorial/releases/20190515025447 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; $HOME/.rbenv/bin/rbenv exec bundle install --path /home/deploy/apps/rails-tutorial/shared/bundle --jobs 4 --without development test --deployment --quiet )
+  INFO [2c4f152f] Finished in 1.083 seconds with exit status 0 (successful).
+ DEBUG [1b978b31] Running if test ! -d /home/deploy/apps/rails-tutorial/releases/20190515025447; then echo "Directory does not exist '/home/deploy/apps/rails-tutorial/releases/20190515025447'" 1>&2; false; fi as deploy@18.222.233.192
+ DEBUG [1b978b31] Command: if test ! -d /home/deploy/apps/rails-tutorial/releases/20190515025447; then echo "Directory does not exist '/home/deploy/apps/rails-tutorial/releases/20190515025447'" 1>&2; false; fi
+ DEBUG [6ec7b5f8] Finished in 0.706 seconds with exit status 0 (successful).
+  INFO [bff0fe6c] Running $HOME/.rbenv/bin/rbenv exec bundle exec rake assets:precompile as deploy@18.222.233.192
+ DEBUG [bff0fe6c] Command: cd /home/deploy/apps/rails-tutorial/releases/20190515025447 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" RAILS_ENV="production" RAILS_GROUPS="" ; $HOME/.rbenv/bin/rbenv exec bundle exec rake assets:precompile )
+  INFO [fa347c30] Finished in 2.315 seconds with exit status 0 (successful).
+ DEBUG [03694227] Running if test ! -d /home/deploy/apps/rails-tutorial/releases/20190515025447; then echo "Directory does not exist '/home/deploy/apps/rails-tutorial/releases/20190515025447'" 1>&2; false; fi as deploy@18.222.233.192
+ DEBUG [03694227] Command: if test ! -d /home/deploy/apps/rails-tutorial/releases/20190515025447; then echo "Directory does not exist '/home/deploy/apps/rails-tutorial/releases/20190515025447'" 1>&2; false; fi
+ DEBUG [cfefb17d] Finished in 0.706 seconds with exit status 0 (successful).
+  INFO [33661d08] Running /usr/bin/env mkdir -p /home/deploy/apps/rails-tutorial/releases/20190515025447/assets_manifest_backup as deploy@18.222.233.192
+ DEBUG [33661d08] Command: cd /home/deploy/apps/rails-tutorial/releases/20190515025447 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env mkdir -p /home/deploy/apps/rails-tutorial/releases/20190515025447/assets_manifest_backup )
+  INFO [18557de6] Finished in 0.709 seconds with exit status 0 (successful).
+ DEBUG [6115544b] Running /usr/bin/env ls /home/deploy/apps/rails-tutorial/releases/20190515025447/public/assets/.sprockets-manifest* as deploy@18.222.233.192
+ DEBUG [6115544b] Command: cd /home/deploy/apps/rails-tutorial/releases/20190515025447 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env ls /home/deploy/apps/rails-tutorial/releases/20190515025447/public/assets/.sprockets-manifest* )
+ DEBUG [0d5a41a3] 	/home/deploy/apps/rails-tutorial/releases/20190515025447/public/assets/.sprockets-manifest-ca196378cd35eccabe1d285a5c202999.json
+ DEBUG [0d5a41a3] 	
+ DEBUG [0d5a41a3] Finished in 0.708 seconds with exit status 0 (successful).
+ DEBUG [1bcd2809] Running /usr/bin/env ls /home/deploy/apps/rails-tutorial/releases/20190515025447/public/assets/.sprockets-manifest* as deploy@18.222.233.192
+ DEBUG [1bcd2809] Command: cd /home/deploy/apps/rails-tutorial/releases/20190515025447 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env ls /home/deploy/apps/rails-tutorial/releases/20190515025447/public/assets/.sprockets-manifest* )
+ DEBUG [e98c1a1c] 	/home/deploy/apps/rails-tutorial/releases/20190515025447/public/assets/.sprockets-manifest-ca196378cd35eccabe1d285a5c202999.json
+ DEBUG [e98c1a1c] 	
+ DEBUG [e98c1a1c] Finished in 0.709 seconds with exit status 0 (successful).
+  INFO [bb68dd0d] Running /usr/bin/env cp /home/deploy/apps/rails-tutorial/releases/20190515025447/public/assets/.sprockets-manifest-ca196378cd35eccabe1d285a5c202999.json /home/deploy/apps/rails-tutorial/releases/20190515025447/assets_manifest_backup as deploy@18.222.233.192
+ DEBUG [bb68dd0d] Command: cd /home/deploy/apps/rails-tutorial/releases/20190515025447 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env cp /home/deploy/apps/rails-tutorial/releases/20190515025447/public/assets/.sprockets-manifest-ca196378cd35eccabe1d285a5c202999.json /home/deploy/apps/rails-tutorial/releases/20190515025447/assets_manifest_backup )
+  INFO [e30785a5] Finished in 0.705 seconds with exit status 0 (successful).
+  INFO [deploy:migrate] Run `rake db:migrate`
+ DEBUG [2b755b68] Running if test ! -d /home/deploy/apps/rails-tutorial/releases/20190515025447; then echo "Directory does not exist '/home/deploy/apps/rails-tutorial/releases/20190515025447'" 1>&2; false; fi as deploy@18.222.233.192
+ DEBUG [2b755b68] Command: if test ! -d /home/deploy/apps/rails-tutorial/releases/20190515025447; then echo "Directory does not exist '/home/deploy/apps/rails-tutorial/releases/20190515025447'" 1>&2; false; fi
+ DEBUG [309e9732] Finished in 0.703 seconds with exit status 0 (successful).
+  INFO [36e86412] Running $HOME/.rbenv/bin/rbenv exec bundle exec rake db:migrate as deploy@18.222.233.192
+ DEBUG [36e86412] Command: cd /home/deploy/apps/rails-tutorial/releases/20190515025447 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" RAILS_ENV="production" ; $HOME/.rbenv/bin/rbenv exec bundle exec rake db:migrate )
+ DEBUG [9f79f339] 	== 20180108093657 CreateUsers: migrating ======================================
+ DEBUG [9f79f339] 	
+ DEBUG [9f79f339] 	-- create_table(:users)
+ DEBUG [9f79f339] 	
+ DEBUG [9f79f339] 	   -> 0.0006s
+ DEBUG [9f79f339] 	
+ DEBUG [9f79f339] 	== 20180108093657 CreateUsers: migrated (0.0008s) =============================
+ DEBUG [9f79f339] 	
+ DEBUG [9f79f339] 	
+ DEBUG [9f79f339] 	== 20180108095300 AddIndexToUsersEmail: migrating =============================
+ DEBUG [9f79f339] 	
+ DEBUG [9f79f339] 	-- add_index(:users, :email, {:unique=>true})
+ DEBUG [9f79f339] 	
+ DEBUG [9f79f339] 	   -> 0.0006s
+ DEBUG [9f79f339] 	
+ DEBUG [9f79f339] 	== 20180108095300 AddIndexToUsersEmail: migrated (0.0008s) ====================
+ DEBUG [9f79f339] 	
+ DEBUG [9f79f339] 	
+ DEBUG [9f79f339] 	== 20180108095906 AddPasswordDigestToUsers: migrating =========================
+ DEBUG [9f79f339] 	
+ DEBUG [9f79f339] 	-- add_column(:users, :password_digest, :string)
+ DEBUG [9f79f339] 	
+ DEBUG [9f79f339] 	   -> 0.0004s
+ DEBUG [9f79f339] 	
+ DEBUG [9f79f339] 	== 20180108095906 AddPasswordDigestToUsers: migrated (0.0006s) ================
+ DEBUG [9f79f339] 	
+ DEBUG [9f79f339] 	
+ DEBUG [9f79f339] 	== 20180111020136 CreateSchools: migrating ====================================
+ DEBUG [9f79f339] 	
+ DEBUG [9f79f339] 	-- create_table(:schools)
+ DEBUG [9f79f339] 	
+ DEBUG [9f79f339] 	   -> 0.0005s
+ DEBUG [9f79f339] 	
+ DEBUG [9f79f339] 	== 20180111020136 CreateSchools: migrated (0.0007s) ===========================
+ DEBUG [9f79f339] 	
+ DEBUG [9f79f339] 	
+ DEBUG [9f79f339] 	== 20180111033111 AddSchoolIdToUsers: migrating ===============================
+ DEBUG [9f79f339] 	
+ DEBUG [9f79f339] 	-- add_column(:users, :school_id, :integer)
+ DEBUG [9f79f339] 	
+ DEBUG [9f79f339] 	   -> 0.0004s
+ DEBUG [9f79f339] 	
+ DEBUG [9f79f339] 	-- add_index(:users, :school_id)
+ DEBUG [9f79f339] 	
+ DEBUG [9f79f339] 	   -> 0.0008s
+ DEBUG [9f79f339] 	
+ DEBUG [9f79f339] 	== 20180111033111 AddSchoolIdToUsers: migrated (0.0014s) ======================
+ DEBUG [9f79f339] 	
+ DEBUG [9f79f339] 	
+ DEBUG [9f79f339] 	== 20180111065433 AddDoBToUsers: migrating ====================================
+ DEBUG [9f79f339] 	
+ DEBUG [9f79f339] 	-- add_column(:users, :dob, :date)
+ DEBUG [9f79f339] 	
+ DEBUG [9f79f339] 	   -> 0.0004s
+ DEBUG [9f79f339] 	
+ DEBUG [9f79f339] 	== 20180111065433 AddDoBToUsers: migrated (0.0005s) ===========================
+ DEBUG [9f79f339] 	
+ DEBUG [9f79f339] 	
+ DEBUG [9f79f339] 	== 20180222085755 AddRememberDigestToUsers: migrating =========================
+ DEBUG [9f79f339] 	
+ DEBUG [9f79f339] 	-- add_column(:users, :remember_digest, :string)
+ DEBUG [9f79f339] 	
+ DEBUG [9f79f339] 	   -> 0.0004s
+ DEBUG [9f79f339] 	
+ DEBUG [9f79f339] 	== 20180222085755 AddRememberDigestToUsers: migrated (0.0005s) ================
+ DEBUG [9f79f339] 	
+ DEBUG [9f79f339] 	
+ DEBUG [9f79f339] 	== 20180303172438 AddAdminToUsers: migrating ==================================
+ DEBUG [9f79f339] 	
+ DEBUG [9f79f339] 	-- add_column(:users, :admin, :boolean, {:default=>false})
+ DEBUG [9f79f339] 	
+ DEBUG [9f79f339] 	   -> 0.0005s
+ DEBUG [9f79f339] 	
+ DEBUG [9f79f339] 	== 20180303172438 AddAdminToUsers: migrated (0.0006s) =========================
+ DEBUG [9f79f339] 	
+ DEBUG [9f79f339] 	
+ DEBUG [9f79f339] 	== 20180308072410 AddActivationToUsers: migrating =============================
+ DEBUG [9f79f339] 	
+ DEBUG [9f79f339] 	-- add_column(:users, :activation_digest, :string)
+ DEBUG [9f79f339] 	
+ DEBUG [9f79f339] 	   -> 0.0004s
+ DEBUG [9f79f339] 	
+ DEBUG [9f79f339] 	-- add_column(:users, :activated, :boolean, {:default=>false})
+ DEBUG [9f79f339] 	
+ DEBUG [9f79f339] 	   -> 0.0003s
+ DEBUG [9f79f339] 	
+ DEBUG [9f79f339] 	-- add_column(:users, :activated_at, :datetime)
+ DEBUG [9f79f339] 	
+ DEBUG [9f79f339] 	   -> 0.0003s
+ DEBUG [9f79f339] 	
+ DEBUG [9f79f339] 	== 20180308072410 AddActivationToUsers: migrated (0.0015s) ====================
+ DEBUG [9f79f339] 	
+ DEBUG [9f79f339] 	
+ DEBUG [9f79f339] 	== 20180312063401 AddResetToUsers: migrating ==================================
+ DEBUG [9f79f339] 	
+ DEBUG [9f79f339] 	-- add_column(:users, :reset_digest, :string)
+ DEBUG [9f79f339] 	
+ DEBUG [9f79f339] 	   -> 0.0004s
+ DEBUG [9f79f339] 	
+ DEBUG [9f79f339] 	-- add_column(:users, :reset_sent_at, :datetime)
+ DEBUG [9f79f339] 	
+ DEBUG [9f79f339] 	   -> 0.0003s
+ DEBUG [9f79f339] 	
+ DEBUG [9f79f339] 	== 20180312063401 AddResetToUsers: migrated (0.0010s) =========================
+ DEBUG [9f79f339] 	
+ DEBUG [9f79f339] 	
+  INFO [9f79f339] Finished in 2.571 seconds with exit status 0 (successful).
+  INFO [1a6c85a0] Running /usr/bin/env ln -s /home/deploy/apps/rails-tutorial/releases/20190515025447 /home/deploy/apps/rails-tutorial/releases/current as deploy@18.222.233.192
+ DEBUG [1a6c85a0] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env ln -s /home/deploy/apps/rails-tutorial/releases/20190515025447 /home/deploy/apps/rails-tutorial/releases/current )
+  INFO [6158282e] Finished in 0.708 seconds with exit status 0 (successful).
+  INFO [e1bff0da] Running /usr/bin/env mv /home/deploy/apps/rails-tutorial/releases/current /home/deploy/apps/rails-tutorial as deploy@18.222.233.192
+ DEBUG [e1bff0da] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env mv /home/deploy/apps/rails-tutorial/releases/current /home/deploy/apps/rails-tutorial )
+  INFO [226ada10] Finished in 0.708 seconds with exit status 0 (successful).
+ DEBUG [1ad54d95] Running /usr/bin/env ls -x /home/deploy/apps/rails-tutorial/releases as deploy@18.222.233.192
+ DEBUG [1ad54d95] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env ls -x /home/deploy/apps/rails-tutorial/releases )
+ DEBUG [6415df6f] 	20190515021746
+ DEBUG [6415df6f] 		
+ DEBUG [6415df6f] 	20190515024613
+ DEBUG [6415df6f] 		
+ DEBUG [6415df6f] 	20190515025447
+ DEBUG [6415df6f] 	
+ DEBUG [6415df6f] Finished in 0.707 seconds with exit status 0 (successful).
+ DEBUG [6f805d70] Running if test ! -d /home/deploy/apps/rails-tutorial/current; then echo "Directory does not exist '/home/deploy/apps/rails-tutorial/current'" 1>&2; false; fi as deploy@18.222.233.192
+ DEBUG [6f805d70] Command: if test ! -d /home/deploy/apps/rails-tutorial/current; then echo "Directory does not exist '/home/deploy/apps/rails-tutorial/current'" 1>&2; false; fi
+ DEBUG [2fbc7dd6] Finished in 0.701 seconds with exit status 0 (successful).
+ DEBUG [235ebfdf] Running [ -f /home/deploy/apps/rails-tutorial/shared/tmp/pids/puma.pid ] as deploy@18.222.233.192
+ DEBUG [235ebfdf] Command: [ -f /home/deploy/apps/rails-tutorial/shared/tmp/pids/puma.pid ]
+ DEBUG [d0c334d7] Finished in 0.707 seconds with exit status 0 (successful).
+ DEBUG [edfad2b0] Running /usr/bin/env kill -0 $( cat /home/deploy/apps/rails-tutorial/shared/tmp/pids/puma.pid ) as deploy@18.222.233.192
+ DEBUG [edfad2b0] Command: cd /home/deploy/apps/rails-tutorial/current && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" RACK_ENV="production" ; /usr/bin/env kill -0 $( cat /home/deploy/apps/rails-tutorial/shared/tmp/pids/puma.pid ) )
+ DEBUG [e716425a] Finished in 0.713 seconds with exit status 0 (successful).
+  INFO [4579ef69] Running $HOME/.rbenv/bin/rbenv exec bundle exec pumactl -S /home/deploy/apps/rails-tutorial/shared/tmp/pids/puma.state -F /home/deploy/apps/rails-tutorial/shared/puma.rb restart as deploy@18.222.233.192
+ DEBUG [4579ef69] Command: cd /home/deploy/apps/rails-tutorial/current && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" RACK_ENV="production" ; $HOME/.rbenv/bin/rbenv exec bundle exec pumactl -S /home/deploy/apps/rails-tutorial/shared/tmp/pids/puma.state -F /home/deploy/apps/rails-tutorial/shared/puma.rb restart )
+ DEBUG [87b59e84] 	Command restart sent success
+ DEBUG [87b59e84] 	
+  INFO [87b59e84] Finished in 1.032 seconds with exit status 0 (successful).
+ DEBUG [901dc51b] Running if test ! -d /home/deploy/apps/rails-tutorial/releases; then echo "Directory does not exist '/home/deploy/apps/rails-tutorial/releases'" 1>&2; false; fi as deploy@18.222.233.192
+ DEBUG [901dc51b] Command: if test ! -d /home/deploy/apps/rails-tutorial/releases; then echo "Directory does not exist '/home/deploy/apps/rails-tutorial/releases'" 1>&2; false; fi
+ DEBUG [5218319d] Finished in 0.710 seconds with exit status 0 (successful).
+  INFO [13119db3] Running /usr/bin/env echo "Branch master (at 38f4ec23bd9d8b821a1edfea8640cee79c7e317e) deployed as release 20190515025447 by FRAMGIA\nguyen.t.h.lanh" >> /home/deploy/apps/rails-tutorial/revisions.log as deploy@18.222.233.192
+ DEBUG [13119db3] Command: cd /home/deploy/apps/rails-tutorial/releases && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="" ; /usr/bin/env echo "Branch master (at 38f4ec23bd9d8b821a1edfea8640cee79c7e317e) deployed as release 20190515025447 by FRAMGIA\nguyen.t.h.lanh" >> /home/deploy/apps/rails-tutorial/revisions.log )
+  INFO [3a26717c] Finished in 0.713 seconds with exit status 0 (successful).
