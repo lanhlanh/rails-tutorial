@@ -5,7 +5,7 @@ set :application, "rails-tutorial"
 set :repo_url, "git@github.com:lanhlanh/rails-tutorial.git"
 
 # Change these
-server "18.191.179.96", port: 80, roles: [:web, :app, :db], primary: true
+server "18.222.233.192", roles: [:web, :app, :db], primary: true
 
 set :user,            "deploy"
 set :puma_threads,    [4, 16]

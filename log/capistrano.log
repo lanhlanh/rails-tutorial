@@ -1,0 +1,21 @@
+# Logfile created on 2019-05-15 09:12:57 +0700 by logger.rb/61378
+  INFO ---------------------------------------------------------------------------
+  INFO START 2019-05-15 09:12:57 +0700 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [765f5464] Running [ -d ~/.rvm ] as deploy@18.191.179.96
+ DEBUG [765f5464] Command: [ -d ~/.rvm ]
+ DEBUG [8f50095c] Running [ -d ~/.rvm ] on 18.191.179.96
+ DEBUG [8f50095c] Command: [ -d ~/.rvm ]
+  INFO ---------------------------------------------------------------------------
+  INFO START 2019-05-15 09:16:05 +0700 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [d423a1c1] Running [ -d ~/.rvm ] as deploy@18.222.233.192
+ DEBUG [d423a1c1] Command: [ -d ~/.rvm ]
+ DEBUG [aea00210] Finished in 3.136 seconds with exit status 1 (failed).
+ DEBUG [338afb4a] Running [ -d /usr/local/rvm ] as deploy@18.222.233.192
+ DEBUG [338afb4a] Command: [ -d /usr/local/rvm ]
+ DEBUG [0713f89d] Finished in 0.710 seconds with exit status 1 (failed).
+ DEBUG [21b8724f] Running ~/.rvm/bin/rvm version as deploy@18.222.233.192
+ DEBUG [21b8724f] Command: ~/.rvm/bin/rvm version
+ DEBUG [a96636e9] 	bash: /home/deploy/.rvm/bin/rvm: No such file or directory
+ DEBUG [a96636e9] 	
